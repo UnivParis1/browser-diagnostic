@@ -145,7 +145,7 @@ function compute_msgs(level, app, ua, now) {
     if (ua_info.old_info) {
         msgs.push(`
             Votre navigateur n'est pas à jour.
-            Les mises à jour de sécurité ne sont plus gérés sur cette version de navigateur (${ua_info.old_info}).
+            Les mises à jour de sécurité ne sont plus gérées sur cette version de navigateur (${ua_info.old_info}).
         `)
         os_msgs.push(`
             ${os_msgs.length ? 'Sinon veuillez' : 'Veuillez'} mettre à jour vers une nouvelle version majeure.
@@ -153,7 +153,7 @@ function compute_msgs(level, app, ua, now) {
     } else if (ua_info.latestReleaseDate && addDays(ua_info.latestReleaseDate, 365) < now) {
         msgs.push(`
             Votre navigateur n'est pas à jour.
-            Les mises à jour de sécurité ne semblent plus être gérés sur cette version de navigateur (dernière mise à jour le ${ua_info.latestReleaseDate.toLocaleDateString()}).
+            Les mises à jour de sécurité ne semblent plus être gérées sur cette version de navigateur (dernière mise à jour le ${ua_info.latestReleaseDate.toLocaleDateString()}).
         `)
         os_msgs.push(`
             ${os_msgs.length ? 'Sinon veuillez' : 'Veuillez'} mettre à jour vers une nouvelle version majeure.
