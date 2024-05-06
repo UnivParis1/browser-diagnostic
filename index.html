@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<header>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</header>
+<body>
+    <script> </script>
+    <div id="msg"></div>
+    <script src="browser-releaseDates.js"></script>
+    <script src="lib.js"></script>
+    <script>
+        let query = new URL(document.location).searchParams;
+        let ua = query.get('emulate') || navigator.userAgent;
+        let level = query.get('level')
+        let app = query.get('app')
+
+        window.prolongation_ENT_args = { current: app }; 
+
+        let msgs = compute_msgs(level, app, ua, new Date())
+        document.getElementById("msg").innerHTML = msgs.join("<p></p>")
+
+    </script>
+    <script type="text/javascript" src="https://ent.univ-paris1.fr/ProlongationENT/loader.js"></script>    
+</body>
+</html>
