@@ -10,56 +10,64 @@
 const tests = [
     [ 
         `Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.141 Safari/537.36`,
-        { name: 'Chrome', major: '87', old_info: 'depuis au moins 2 ans', suggest_macos_upgrade: true }
+        { name: 'Chrome', major: '87', clean_ua: '(Intel Mac OS X 10_10_5) Chrome/87.0.4280.141', old_info: 'depuis au moins 2 ans', suggest_macos_upgrade: true }
     ],    
     [ 
         `Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36`,
-        { name: 'Chrome', major: '109', old_info: 'depuis au moins 6 mois', suggest_windows_firefox_ESR: true }
+        { name: 'Chrome', major: '109', clean_ua: '(Windows NT 6.3; x64) Chrome/109', old_info: 'depuis au moins 6 mois', suggest_windows_firefox_ESR: true }
     ],
     [ 
         `Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.3`,
-        { name: 'Chrome', major: '123', firstReleaseDate: new Date('2024-3-13'), latestReleaseDate: new Date('2024-4-15'), eol: new Date('2024-04-09 23:00:00Z') }
+        { name: 'Chrome', major: '123', clean_ua: '(Windows; x64) Chrome/123', firstReleaseDate: new Date('2024-3-13'), latestReleaseDate: new Date('2024-4-15'), eol: new Date('2024-04-09 23:00:00Z') }
     ],
     [
         `Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.1.3 Safari/605.1.15`,
         // NB : la version 13.1.3 est inconnue...
-        { name: 'Safari', major: '13', version: '13.1', full_version: '13.1.3', firstReleaseDate: new Date('28 jan 2020'), latestReleaseDate: new Date('15 jul 2020'), suggest_macos_upgrade: true }
+        { name: 'Safari', major: '13', version: '13.1', full_version: '13.1.3', clean_ua: '(Intel Mac OS X) 13.1.3 Safari', firstReleaseDate: new Date('28 jan 2020'), latestReleaseDate: new Date('15 jul 2020'), suggest_macos_upgrade: true }
     ],
     [
         `Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/15.6.1 Safari/605.1.15`,
-        { name: 'Safari', major: '15', version: '15.6', full_version: '15.6.1', firstReleaseDate: new Date('20 sep 2021'), latestReleaseDate: new Date('18 aug 2022'), suggest_macos_firefox_chrome: true }
+        { name: 'Safari', major: '15', version: '15.6', full_version: '15.6.1', clean_ua: '(Intel Mac OS X) 15.6.1 Safari', firstReleaseDate: new Date('20 sep 2021'), latestReleaseDate: new Date('18 aug 2022'), suggest_macos_firefox_chrome: true }
     ],
     [
         `Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.5 Safari/605.1.150.61`,
-        { name: 'Safari', major: '16', version: '16.5', full_version: '16.5', firstReleaseDate: new Date('12 sep 2022'), latestReleaseDate: new Date('18 may 2023'), suggest_macos_firefox_chrome: true }
+        { name: 'Safari', major: '16', version: '16.5', full_version: '16.5', clean_ua: '(Intel Mac OS X) 16.5 Safari', firstReleaseDate: new Date('12 sep 2022'), latestReleaseDate: new Date('18 may 2023'), suggest_macos_firefox_chrome: true }
+    ],
+    [
+        `Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.4.1 Safari/605.1.15`,
+        { name: 'Safari', major: '17', version: '17.4', full_version: '17.4.1', clean_ua: '(Intel Mac OS X) 17.4.1 Safari', firstReleaseDate: new Date('26 sep 2023'), latestReleaseDate: new Date('25 mar 2024') }
+    ],
+    [
+        `Mozilla/5.0 (iPhone; CPU iPhone OS 17_4_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.4.1 Mobile/15E148 Safari/604.`,
+        { "name": "Safari", "major": "17", "version": "17.4", "full_version": "17.4.1", "clean_ua": "(iPhone) 17.4.1 Safari", "firstReleaseDate": new Date("26 sep 2023"), "latestReleaseDate": new Date("25 mar 2024") }
     ],
     [
         `Mozilla/5.0 (Macintosh; Intel Mac OS X 14.4; rv:125.0) Gecko/20100101 Firefox/78.0`,
-        { name: 'Firefox', major: '78', firstReleaseDate: new Date("2020-06-30"), latestReleaseDate: new Date('2021-10-05'), eol: new Date('2021-11-02'), suggest_macos_upgrade: true }
+        { name: 'Firefox', major: '78', clean_ua: '(Intel Mac OS X 14.4) Firefox/78.0', firstReleaseDate: new Date("2020-06-30"), latestReleaseDate: new Date('2021-10-05'), eol: new Date('2021-11-02'), suggest_macos_upgrade: true }
     ],
     [
         `Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:91.0) Gecko/20100101 Firefox/91.0`,
-        { name: 'Firefox', major: '91', firstReleaseDate: new Date("2021-08-10"), latestReleaseDate: new Date('2022-08-23'), eol: new Date("2022-09-20") }
+        { name: 'Firefox', major: '91', clean_ua: '(Windows; x64) Firefox/91.0', firstReleaseDate: new Date("2021-08-10"), latestReleaseDate: new Date('2022-08-23'), eol: new Date("2022-09-20") }
     ],
     [
         `Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:91.0) Gecko/20100101 Firefox/115.0`,
-        { name: 'Firefox', major: '115', firstReleaseDate: new Date("2023-07-04"), latestReleaseDate: new Date('2024-04-16'), eol: new Date("2024-10-01") }
+        { name: 'Firefox', major: '115', clean_ua: '(Windows; x64) Firefox/115.0', firstReleaseDate: new Date("2023-07-04"), latestReleaseDate: new Date('2024-04-16'), eol: new Date("2024-10-01") }
     ],
     [
         `Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:91.0) Gecko/20100101 Firefox/116.0`,
-        { name: 'Firefox', major: '116', firstReleaseDate: new Date("2023-08-01"), latestReleaseDate: new Date('2023-08-16'), eol: new Date("2023-08-29") }
+        { name: 'Firefox', major: '116', clean_ua: '(Windows; x64) Firefox/116.0', firstReleaseDate: new Date("2023-08-01"), latestReleaseDate: new Date('2023-08-16'), eol: new Date("2023-08-29") }
     ],
     [
-        `Mozilla/5.0 (Macintosh; Intel Mac OS X 14.4; rv:125.0) Gecko/20100101 Firefox/125.0`,
-        { name: 'Firefox', major: '125', firstReleaseDate: new Date("2024-04-16"), latestReleaseDate: new Date('2024-04-29'), eol: null }
-    ],
-    [
-        `Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36 Edg/123.0.0.`,
-        { name: 'Edge', major: '123', firstReleaseDate: new Date('22-Mar-2024'), eol: new Date('19-Apr-2024 01:00:00') }
+        `Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:125.0) Gecko/20100101 Firefox/125.0`,
+        { name: 'Firefox', major: '125', clean_ua: '(Intel Mac OS X) Firefox/125.0', firstReleaseDate: new Date("2024-04-16"), latestReleaseDate: new Date('2024-04-29'), eol: null }
     ],
     [
         `Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36 Edg/122.0.0.`,
-        { name: 'Edge', major: '122', firstReleaseDate: new Date('23-Feb-2024'), eol: new Date('19-Apr-2024 01:00:00'), isExtended: true }
+        { name: 'Edge', major: '122', clean_ua: '(Windows; x64) Edg/122', firstReleaseDate: new Date('23-Feb-2024'), eol: new Date('19-Apr-2024 01:00:00'), isExtended: true }
+    ],
+    [
+        `Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36 Edg/123.0.0.`,
+        { name: 'Edge', major: '123', clean_ua: '(Windows; x64) Edg/123', firstReleaseDate: new Date('22-Mar-2024'), eol: new Date('19-Apr-2024 01:00:00') }
     ],
 
 ]
@@ -67,13 +75,13 @@ let errs = 0
     for (const test of tests) {
         const [ua, expected] = test
         const got = get_info(ua)
-        const got_ = JSON.stringify(got)
-        const expected_ = JSON.stringify(expected)
+        const got_ = JSON.stringify(got, undefined, ' ')
+        const expected_ = JSON.stringify(expected, undefined, ' ')
         if (got_ !== expected_) {
             errs++
-            document.write("<p></p>Pb: ")
-            document.write("<br>got<br>" + got_)
-            document.write("<br>expected<br>" + expected_)
+            document.write("<p></p>Pb for " + ua + " :")
+            document.write("<br>got<br><pre>" + got_ + "</pre>")
+            document.write("<br>expected<br><pre>" + expected_ + "</pre>")
             console.error("got", got, "vs expected", expected)
         }
     }

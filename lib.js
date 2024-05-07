@@ -43,6 +43,34 @@ function add_chrome_edge_eol(resp) {
 
 function get_info(ua) {
     let resp = ua_to_name_version(ua)
+    let clean_ua = ua
+        .replace(/^Mozilla[/]5[.]0 /, '')
+        .replace(' (KHTML, like Gecko)', '')
+        .replace(' like Mac OS X', '')
+        .replace(' Gecko/20100101', '')
+        .replace(/ AppleWebKit[/][\d.]+/, '')
+        .replace('Macintosh; Intel Mac OS X 10_15_7', 'Intel Mac OS X')
+        .replace('Macintosh; Intel Mac OS X 10.15', 'Intel Mac OS X')
+        .replace('Macintosh; Intel Mac OS X', 'Intel Mac OS X')
+        .replace('Windows NT 10.0', 'Windows')
+        .replace('Win64; x64', 'x64')
+        .replace('.0.0.0', '')
+    if (resp.name === 'Chrome') {
+        clean_ua = clean_ua.replace(/ Safari[/][\d.]+/, '')
+    } else if (resp.name === 'Edge') {
+        clean_ua = clean_ua.replace(/ Safari[/][\d.]+/, '')
+        clean_ua = clean_ua.replace(/ Chrome[/][\d.]+/, '')
+        clean_ua = clean_ua.replace(/[.]0[.]0[.]$/, '')
+    } else if (resp.name === 'Safari') {
+        clean_ua = clean_ua.replace(/; CPU iPhone OS [\d_]+/, '')
+        clean_ua = clean_ua.replace(/ Mobile[/][\w]+ /, ' ')
+         
+        clean_ua = clean_ua.replace(/Version[/]([\d.]+ Safari)[/][\d.]+/, '$1')
+    } else if (resp.name === 'Firefox') {
+        clean_ua = clean_ua.replace(/; rv:[\d.]+/, '')
+    }
+    resp.clean_ua = clean_ua
+
     let major = parseFloat(resp.major)
     if (resp.name === 'Firefox') {
         // https://endoflife.date/firefox
