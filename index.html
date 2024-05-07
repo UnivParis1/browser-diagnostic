@@ -9,6 +9,7 @@
     <div id="msg"></div>
     <script src="browser-releaseDates.js"></script>
     <script src="lib.js"></script>
+    <script src="conf.js"></script>
     <script>
         let query = new URL(document.location).searchParams;
         let ua = query.get('emulate') || navigator.userAgent;
@@ -16,11 +17,12 @@
         let app = query.get('app')
 
         if (app) {
-            window.prolongation_ENT_args = { current: app }; 
+            window.prolongation_ENT_args = { current: app };
         }
 
         let msgs = compute_msgs(level, app, ua, new Date())
         if (!msgs.length) msgs.push(`Votre navigateur est à jour.`)
+        after_compute_msgs(msgs, level, app, ua, new Date())
         document.getElementById("msg").innerHTML = msgs.join("<p></p>")
 
     </script>

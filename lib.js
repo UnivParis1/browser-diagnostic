@@ -55,6 +55,8 @@ function get_info(ua) {
         if (major <= 78 && ua.match(/Mac OS X/)) {        
             // https://www.mozilla.org/en-US/firefox/78.0/system-requirements/
             resp.suggest_macos_upgrade = true
+        } else if (major < 78) {
+            resp.old_info = 'depuis au moins 3 ans'
         }
         // encore un peu de temps pour les Windows 7-8 grace à l'ESR : https://www.mozilla.org/en-US/firefox/115.0esr/system-requirements/
     } else if (resp.name === 'Chrome') {
