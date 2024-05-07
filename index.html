@@ -20,6 +20,7 @@
         }
 
         let msgs = compute_msgs(level, app, ua, new Date())
+        if (!msgs.length) msgs.push(`Votre navigateur est à jour.`)
         document.getElementById("msg").innerHTML = msgs.join("<p></p>")
 
     </script>
