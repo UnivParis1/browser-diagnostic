@@ -188,6 +188,8 @@ function compute_msgs(level, app, ua, now) {
         os_msgs.push(`
             ${os_msgs.length ? 'Sinon veuillez' : 'Veuillez'} mettre à jour vers une nouvelle version majeure.
         `)
+    } else if (!os_msgs.length) {
+        msgs.push(level === 'fatal' ? `Votre navigateur semble être à jour.` : `Votre navigateur est à jour`)
     }
     return msgs.concat(os_msgs)
 }
