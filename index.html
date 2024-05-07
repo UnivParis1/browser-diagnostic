@@ -15,7 +15,9 @@
         let level = query.get('level')
         let app = query.get('app')
 
-        window.prolongation_ENT_args = { current: app }; 
+        if (app) {
+            window.prolongation_ENT_args = { current: app }; 
+        }
 
         let msgs = compute_msgs(level, app, ua, new Date())
         document.getElementById("msg").innerHTML = msgs.join("<p></p>")
