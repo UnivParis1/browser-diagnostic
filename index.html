@@ -3,27 +3,141 @@
 <header>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diagnostiquer le navigateur</title>
+    <style>
+        html, body {
+            font-family: Arial, sans-serif;
+        }
+        .body {
+            margin: 0 auto;
+            max-width: 800px;
+        }
+        .require-msg {
+            margin: 1rem 0;
+            padding: 2rem;
+            border: 1px solid red;
+            background: #ffe0e0;
+        }
+        .warning {
+            margin: 1rem 0 2rem;
+            padding: 2rem;
+            border: 1px solid #cf8500;
+            background: #ffd580;
+        }
+        .warning:empty {
+            display: none;
+        }
+        .hidden {
+            display: none;
+        }
+        td {
+            padding: 0.3rem 1rem 0 0
+        }
+        .details_techniques {
+            margin-top: 3rem;
+        }
+    </style>
 </header>
 <body>
-    <script> </script>
-    <div id="msg"></div>
+  <div class="body">
+    <div id="require--recent-browser" class="require-msg hidden">
+        Votre navigateur n'est pas compatible avec cette application.</b>
+    </div>
+    <div id="require--vlan-administratif" class="require-msg hidden">
+        Vous tentez d'accéder à un espace réservé aux administratifs.
+        <p></p>
+        Communiquez les informations ci-dessous à assistance-dsiun@univ-paris1.fr pour que l'accès vous soit éventuellement ouvert.
+    </div>
+    <div id="require--vlan-up1" class="require-msg hidden">
+        Vous tentez d'accéder à un espace accessible à partir du réseau de l'université Paris 1.
+        <p></p>
+        Communiquez les informations ci-dessous à assistance-dsiun@univ-paris1.fr pour diagnostiquer le problème.
+    </div>
+    <div id="require--not-ipv6-if-vpn" class="require-msg hidden">
+        Il semble que vous utilisiez le VPN mais que votre IPv6 ne soit pas désactivée. Cette configuration n'est pas fonctionnelle. Contactez la DSIUN.
+    </div>        
+
+    <div id="brower_warnings" class="warning"></div>
+
+    <fieldset class="details_techniques">
+        <legend>Détails techniques</legend>
+        <table>
+            <tr id="clean_ua"><td>Navigateur</td><td>...</td></tr>
+            <tr id="ip"><td>Adresse IP</td><td>...</td></tr>
+            <tr id="ipv6"><td>Adresse IPv6</td><td>...</td></tr>
+            <tr id="dns"><td>Nom DNS</td><td>...</td></tr>
+            <tr id="dns_ipv6"><td>Nom DNS IPv6</td><td>...</td></tr>
+        </table>
+    </fieldset>
+  </div>
+    
     <script src="browser-releaseDates.js"></script>
     <script src="lib.js"></script>
     <script src="conf.js"></script>
     <script>
-        let query = new URL(document.location).searchParams;
-        let ua = query.get('emulate') || navigator.userAgent;
-        let level = query.get('level')
-        let app = query.get('app')
-
-        if (app) {
-            window.prolongation_ENT_args = { current: app };
+        function display_technical_info(id, val) {
+            if (val) {
+                document.querySelector(`#${id} td:nth-child(2)`).innerText = val
+            } else {
+                document.getElementById(id).style.display = "none"
+            }
         }
 
-        let msgs = compute_msgs(level, app, ua, new Date())
-        after_compute_msgs(msgs, level, app, ua, new Date())
-        document.getElementById("msg").innerHTML = msgs.join("<p></p>")
+        function display_network_info(query, userId) {
+            let emulate_ipv4 = query.get('emulate_ipv4')
+            let emulate_ipv6 = query.get('emulate_ipv6')
+            const params = (ip) => {
+                let opts = { userId: userId } // for logs only
+                if (ip) opts.emulate = ip
+                return "?" + new URLSearchParams(opts)
+            }
+            Promise.all([
+                'https://perdu-ipv4.univ-paris1.fr/api.php' + params(emulate_ipv4),
+                'https://perdu.univ-paris1.fr/api.php' + params(emulate_ipv6),
+            ].map(url => fetch(url).then(resp => resp.json()))).then(network_infos => {
+                const ipv4_info = network_infos[0]
+                const ip_info = network_infos[1]
+                console.log(ipv4_info, ip_info)
+                display_technical_info("ip", ipv4_info.ip)
+                display_technical_info("dns", ipv4_info.hostaddress || 'aucun')
+                display_technical_info("ipv6", ip_info.ip !== ipv4_info.ip ? ip_info.ip : undefined)
+                display_technical_info("dns_ipv6", ip_info.hostaddress !== ipv4_info.hostaddress ? (ip_info.hostaddress || 'aucun') : undefined)
 
+                if (ipv4_info.ipUp1 && !ip_info.ipUp1) {
+                    document.getElementById('require--not-ipv6-if-vpn').classList.remove('hidden')
+                }
+            })
+        }
+
+        function display_browser_warnings(require, ua_info) {
+            let brower_warnings = compute_browser_warnings(require, ua_info, new Date())
+            after_compute_browser_warnings(brower_warnings, require, app, ua_info)
+            document.getElementById("brower_warnings").innerHTML = brower_warnings.join("<p></p>")
+        }
+
+        let query = new URL(document.location).searchParams;
+        let ua = query.get('emulate') || navigator.userAgent;
+        let app = query.get('app') || query.get('service')
+        let require = query.get('require') || app === 'esignature' && 'recent-browser'
+
+        if (app) {
+            window.prolongation_ENT_args = { current: app, onload: (pE) => {
+                display_network_info(query, pE.DATA.user || '')
+            }, onNotLogged: () => {
+                // do it anyway
+                display_network_info(query, '')
+            } }
+        } else {
+            display_network_info(query, '')
+        }
+        if (require) {
+            document.title = "Accès interdit ou erreur navigateur"
+            let elt = document.getElementById(`require--${require}`)
+            if (elt) elt.classList.remove('hidden')
+        }
+        let ua_info = get_browser_info(ua)
+        display_browser_warnings(require, ua_info)
+        display_technical_info("clean_ua", ua_info.clean_ua)
     </script>
     <script type="text/javascript" src="https://ent.univ-paris1.fr/ProlongationENT/loader.js"></script>    
 </body>

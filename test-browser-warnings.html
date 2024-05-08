@@ -74,7 +74,7 @@ const tests = [
 let errs = 0
     for (const test of tests) {
         const [ua, expected] = test
-        const got = get_info(ua)
+        const got = get_browser_info(ua)
         const got_ = JSON.stringify(got, undefined, ' ')
         const expected_ = JSON.stringify(expected, undefined, ' ')
         if (got_ !== expected_) {
@@ -89,12 +89,13 @@ let errs = 0
         document.write("All ok!")
         for (const test of tests) {
             const [ua, expected] = test
-            const level = ''
+            const require = 'recent-browser'
             const app = 'APP'
-            const msgs = compute_msgs(level, app, ua, new Date('2024-05-01'))
+            const ua_info = get_browser_info(ua)
+            const msgs = compute_browser_warnings(require, ua_info, new Date('2024-05-01'))
             document.write("<pre>" + JSON.stringify(expected, undefined, '  ') + "</pre>")
             document.write(msgs.join("<p></p>"))
-            document.write(`<br><a href='index.html?${new URLSearchParams({ app, level, emulate: ua })}'>emulate</a>`)
+            document.write(`<br><a href='index.html?${new URLSearchParams({ app, require, emulate: ua })}'>emulate</a>`)
             document.write('<hr>')
         }
     }

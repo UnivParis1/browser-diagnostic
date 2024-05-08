@@ -41,7 +41,7 @@ function add_chrome_edge_eol(resp) {
     if (isExtended) resp.isExtended = true
 }
 
-function get_info(ua) {
+function get_browser_info(ua) {
     let resp = ua_to_name_version(ua)
     let clean_ua = ua
         .replace(/^Mozilla[/]5[.]0 /, '')
@@ -136,17 +136,10 @@ function get_info(ua) {
     return resp
 }
 
-function compute_msgs(level, app, ua, now) {
-    let ua_info = get_info(ua)
-    console.log({level,app,ua}, ua_info)
+function compute_browser_warnings(require, ua_info, now) {
 
     let msgs = []
     let os_msgs = []
-    if (level === 'fatal') {
-        msgs.push(`
-            <b>Votre navigateur n'est pas compatible avec cette application.</b>
-        `)
-    }
     if (ua_info.suggest_macos_upgrade) {
         // Safari / MacOS versions : https://support.apple.com/en-us/HT201222
         // Voir aussi https://endoflife.date/macos
@@ -188,8 +181,12 @@ function compute_msgs(level, app, ua, now) {
         os_msgs.push(`
             ${os_msgs.length ? 'Sinon veuillez' : 'Veuillez'} mettre à jour vers une nouvelle version majeure.
         `)
-    } else if (!os_msgs.length) {
-        msgs.push(level === 'fatal' ? `Votre navigateur semble être à jour.` : `Votre navigateur est à jour`)
+    } else if (!os_msgs.length && require === 'recent-browser') {
+        msgs.push(`Votre navigateur semble être à jour
+        <p></p>
+        Communiquez les informations ci-dessous à assistance-dsiun@univ-paris1.fr pour diagnostiquer le problème.
+        `)
     }
+
     return msgs.concat(os_msgs)
 }
