@@ -138,7 +138,7 @@
             let elt = document.getElementById(`require--${require}`)
             if (elt) elt.classList.remove('hidden')
         }
-        let ua_info = get_browser_info(ua)
+        let ua_info = get_browser_info(browser_releaseDates, ua)
         display_browser_warnings(require, ua_info)
         display_technical_info("clean_ua", ua_info.clean_ua)
 

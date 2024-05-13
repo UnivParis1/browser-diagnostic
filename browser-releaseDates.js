@@ -569,3 +569,7 @@ edge:
 ]
 ,
 }
+
+if (typeof module === "object" && typeof module.exports === "object") {
+    module.exports = browser_releaseDates
+}

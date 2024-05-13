@@ -17,8 +17,11 @@ function new_date(date) {
 }
 
 function ua_to_name_version(ua) {
-    let m = ua.match(/(Firefox|Chrome|Safari|SamsungBrowser)\/(\d+)/) || []
+    let m = ua.match(/(Firefox|Chrome|CriOS|Safari|SamsungBrowser)\/(\d+)/) || []
     let resp = { name: m[1], major: m[2] }
+    if (resp.name === 'CriOS') {
+        resp.name = 'Chrome_iOS'
+    }
     if (resp.name === 'Chrome') {
         m = ua.match(/Edg\/(\d+)/)
         if (m) {
@@ -41,7 +44,7 @@ function add_chrome_edge_eol(resp) {
     if (isExtended) resp.isExtended = true
 }
 
-function get_browser_info(ua) {
+function get_browser_info(browser_releaseDates, ua) {
     let resp = ua_to_name_version(ua)
     let clean_ua = ua
         .replace(/^Mozilla[/]5[.]0 /, '')
@@ -53,6 +56,7 @@ function get_browser_info(ua) {
         .replace('Macintosh; Intel Mac OS X 10.15', 'Intel Mac OS X')
         .replace('Macintosh; Intel Mac OS X', 'Intel Mac OS X')
         .replace('Windows NT 10.0', 'Windows')
+        .replace('X11; CrOS x86_64 14541.0.0', 'CrOS x86_64')
         .replace('Win64; x64', 'x64')
         .replace('Linux; Android 10; K)', 'Android)')
         .replace('.0.0.0', '')
@@ -72,6 +76,9 @@ function get_browser_info(ua) {
         clean_ua = clean_ua.replace(/ Mobile[/][\w]+ /, ' ')
          
         clean_ua = clean_ua.replace(/Version[/]([\d.]+ Safari)[/][\d.]+/, '$1')
+    } else if (resp.name === 'Chrome_iOS') {
+        clean_ua = clean_ua.replace(/; CPU iPhone OS [\d_]+/, '')
+        clean_ua = clean_ua.replace(/ Mobile[/][\w]+ /, ' ')
     } else if (resp.name === 'Firefox') {
         clean_ua = clean_ua.replace(/; rv:[\d.]+/, '')
         clean_ua = clean_ua.replace(/Gecko\/[\d.]+ /, '')
@@ -94,7 +101,7 @@ function get_browser_info(ua) {
             resp.old_info = 'depuis au moins 3 ans'
         }
         // encore un peu de temps pour les Windows 7-8 grace à l'ESR : https://www.mozilla.org/en-US/firefox/115.0esr/system-requirements/
-    } else if (resp.name === 'Chrome') {
+    } else if (resp.name === 'Chrome' || resp.name === 'Chrome_iOS') {
         let matches = browser_releaseDates.chrome.filter(info => info.milestone === major)
         if (!matches.length) {
             // fallback on Edge dates which are mostly the same!
@@ -132,11 +139,11 @@ function get_browser_info(ua) {
             resp.firstReleaseDate = new Date(Math.min.apply(null, dates))
             resp.latestReleaseDate = new Date(Math.max.apply(null, dates))
         }
-        if (15 <= major && major <= 16) {
+        if (15 <= major && major <= 16 && !ua.match('Mobile/')) {
             // Chrome & Firefox sont dispo sur MacOS >= 10.15 (Catalina)
             // Un MacOS Catalina à jour a Safari 15 (mais un MacOS Catalina non à jour aura Safari >= 13)
             resp.suggest_macos_firefox_chrome = true
-        } else if (major < 15) {
+        } else if (major < 15 && !ua.match('Mobile/')) {
             resp.suggest_macos_upgrade = true
         }
     } else if (resp.name === 'SamsungBrowser') {
@@ -206,4 +213,8 @@ function compute_browser_warnings(require, ua_info, now) {
     }
 
     return msgs.concat(os_msgs)
+}
+
+if (typeof module === "object" && typeof module.exports === "object") {
+    module.exports = { get_browser_info: get_browser_info }
 }
