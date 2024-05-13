@@ -81,6 +81,10 @@ const tests = [
         `Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) SamsungBrowser/22.0 Chrome/111.0.5563.116 Mobile Safari/537.36`,
         { name: "SamsungBrowser", major: "22", clean_ua: '(Android) SamsungBrowser/22.0', firstReleaseDate: new Date('12 jul 2023'), latestReleaseDate: new Date('16 sep 2023') },
     ],
+    [
+        `Mozilla/5.0 (Android 10; Mobile; rv:124.0) Gecko/124.0 Firefox/124.0`,
+        { name: "Firefox", major: "124", clean_ua: "(Android 10; Mobile) Firefox/124.0", firstReleaseDate: new Date("2024-03-19"), latestReleaseDate: new Date("2024-04-02"), eol: new Date("2024-04-16") },
+    ],
 ]
 let errs = 0
     for (const test of tests) {

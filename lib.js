@@ -74,6 +74,7 @@ function get_browser_info(ua) {
         clean_ua = clean_ua.replace(/Version[/]([\d.]+ Safari)[/][\d.]+/, '$1')
     } else if (resp.name === 'Firefox') {
         clean_ua = clean_ua.replace(/; rv:[\d.]+/, '')
+        clean_ua = clean_ua.replace(/Gecko\/[\d.]+ /, '')
     }
     resp.clean_ua = clean_ua
 

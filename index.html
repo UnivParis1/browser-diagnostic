@@ -67,6 +67,8 @@
             <tr id="ipv6"><td>Adresse IPv6</td><td>...</td></tr>
             <tr id="dns"><td>Nom DNS</td><td>...</td></tr>
             <tr id="dns_ipv6"><td>Nom DNS IPv6</td><td>...</td></tr>
+            <tr id="date"><td>Date et heure</td><td>...</td></tr>
+            <tr id="userId"><td>Identifiant utilisateur</td><td>...</td></tr>
         </table>
     </fieldset>
   </div>
@@ -84,6 +86,7 @@
         }
 
         function display_network_info(query, userId) {
+            display_technical_info('userId', userId)
             let emulate_ipv4 = query.get('emulate_ipv4')
             let emulate_ipv6 = query.get('emulate_ipv6')
             const params = (ip) => {
@@ -138,6 +141,8 @@
         let ua_info = get_browser_info(ua)
         display_browser_warnings(require, ua_info)
         display_technical_info("clean_ua", ua_info.clean_ua)
+
+        display_technical_info("date", new Date().toLocaleString())
     </script>
     <script type="text/javascript" src="https://ent.univ-paris1.fr/ProlongationENT/loader.js"></script>    
 </body>
