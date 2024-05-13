@@ -9,7 +9,7 @@ function addDays(date, days) {
 }
 
 function version_compare(v1, v2) {
-    return (""+v1).localeCompare(v2, undefined, { numeric: true })
+    return (""+v1).localeCompare(""+v2, undefined, { numeric: true })
 }
 
 function new_date(date) {
@@ -17,7 +17,7 @@ function new_date(date) {
 }
 
 function ua_to_name_version(ua) {
-    let m = ua.match(/(Firefox|Chrome|Safari)\/(\d+)/) || []
+    let m = ua.match(/(Firefox|Chrome|Safari|SamsungBrowser)\/(\d+)/) || []
     let resp = { name: m[1], major: m[2] }
     if (resp.name === 'Chrome') {
         m = ua.match(/Edg\/(\d+)/)
@@ -54,6 +54,7 @@ function get_browser_info(ua) {
         .replace('Macintosh; Intel Mac OS X', 'Intel Mac OS X')
         .replace('Windows NT 10.0', 'Windows')
         .replace('Win64; x64', 'x64')
+        .replace('Linux; Android 10; K)', 'Android)')
         .replace('.0.0.0', '')
     if (resp.name === 'Chrome') {
         clean_ua = clean_ua.replace(/ Safari[/][\d.]+/, '')
@@ -61,6 +62,11 @@ function get_browser_info(ua) {
         clean_ua = clean_ua.replace(/ Safari[/][\d.]+/, '')
         clean_ua = clean_ua.replace(/ Chrome[/][\d.]+/, '')
         clean_ua = clean_ua.replace(/[.]0[.]0[.]$/, '')
+    } else if (resp.name === 'SamsungBrowser') {
+        clean_ua = clean_ua.replace(/ Safari[/][\d.]+/, '')
+        clean_ua = clean_ua.replace(/ Chrome[/][\d.]+/, '')
+        clean_ua = clean_ua.replace(/[.]0$/, '')
+        clean_ua = clean_ua.replace(' Mobile', '')
     } else if (resp.name === 'Safari') {
         clean_ua = clean_ua.replace(/; CPU iPhone OS [\d_]+/, '')
         clean_ua = clean_ua.replace(/ Mobile[/][\w]+ /, ' ')
@@ -132,6 +138,15 @@ function get_browser_info(ua) {
         } else if (major < 15) {
             resp.suggest_macos_upgrade = true
         }
+    } else if (resp.name === 'SamsungBrowser') {
+        let versions = Object.keys(browser_releaseDates.samsungbrowser).filter(v => (
+            version_compare(major, v) <= 0 && version_compare(major + 1, v) >= 0
+        ))
+        if (versions.length) {
+            let dates = versions.map(v => new Date(browser_releaseDates.samsungbrowser[v]))
+            resp.firstReleaseDate = new Date(Math.min.apply(null, dates))
+            resp.latestReleaseDate = new Date(Math.max.apply(null, dates))
+        }
     }
     return resp
 }
@@ -162,7 +177,8 @@ function compute_browser_warnings(require, ua_info, now) {
         `)
     }
 
-    if (ua_info.eol && addDays(ua_info.eol, 60) < now) {
+    const one_month = 30
+    if (ua_info.eol && addDays(ua_info.eol, one_month) < now) {
         ua_info.old_info = `depuis le ${ua_info.eol.toLocaleDateString()}`
     } 
     if (ua_info.old_info) {
@@ -173,7 +189,7 @@ function compute_browser_warnings(require, ua_info, now) {
         os_msgs.push(`
             ${os_msgs.length ? 'Sinon veuillez' : 'Veuillez'} mettre à jour vers une nouvelle version majeure.
         `)
-    } else if (ua_info.latestReleaseDate && addDays(ua_info.latestReleaseDate, 365) < now) {
+    } else if (ua_info.latestReleaseDate && addDays(ua_info.latestReleaseDate, 6 * one_month) < now) {
         msgs.push(`
             Votre navigateur n'est pas à jour.
             Les mises à jour de sécurité ne semblent plus être gérées sur cette version de navigateur (dernière mise à jour le ${ua_info.latestReleaseDate.toLocaleDateString()}).
