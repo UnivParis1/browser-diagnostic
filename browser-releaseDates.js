@@ -1,7 +1,215 @@
 browser_releaseDates = {
 firefox: 
-[{"cycle":"125","releaseDate":"2024-04-16","eol":false,"latest":"125.0.3","latestReleaseDate":"2024-04-29","lts":false},{"cycle":"124","releaseDate":"2024-03-19","eol":"2024-04-16","latest":"124.0.2","latestReleaseDate":"2024-04-02","lts":false},{"cycle":"123","releaseDate":"2024-02-20","eol":"2024-03-19","latest":"123.0.1","latestReleaseDate":"2024-03-05","lts":false},{"cycle":"122","releaseDate":"2024-01-23","eol":"2024-02-20","latest":"122.0.1","latestReleaseDate":"2024-02-06","lts":false},{"cycle":"121","releaseDate":"2023-12-19","eol":"2024-01-23","latest":"121.0.1","latestReleaseDate":"2024-01-09","lts":false},{"cycle":"120","releaseDate":"2023-11-21","eol":"2023-12-19","latest":"120.0.1","latestReleaseDate":"2023-11-30","lts":false},{"cycle":"119","releaseDate":"2023-10-24","eol":"2023-11-21","latest":"119.0.1","latestReleaseDate":"2023-11-07","lts":false},{"cycle":"118","releaseDate":"2023-09-26","eol":"2023-10-24","latest":"118.0.2","latestReleaseDate":"2023-10-10","lts":false},{"cycle":"117","releaseDate":"2023-08-29","eol":"2023-09-26","latest":"117.0.1","latestReleaseDate":"2023-09-12","lts":false},{"cycle":"116","releaseDate":"2023-08-01","eol":"2023-08-29","latest":"116.0.3","latestReleaseDate":"2023-08-16","lts":false},{"cycle":"115","lts":true,"releaseDate":"2023-07-04","eol":"2024-10-01","latest":"115.10.0","latestReleaseDate":"2024-04-16"},{"cycle":"114","releaseDate":"2023-06-06","eol":"2023-07-04","latest":"114.0.2","latestReleaseDate":"2023-06-20","lts":false},{"cycle":"113","releaseDate":"2023-05-09","eol":"2023-06-06","latest":"113.0.2","latestReleaseDate":"2023-05-23","lts":false},{"cycle":"112","releaseDate":"2023-04-11","eol":"2023-05-09","latest":"112.0.2","latestReleaseDate":"2023-04-25","lts":false},{"cycle":"111","releaseDate":"2023-03-14","eol":"2023-04-11","latest":"111.0.1","latestReleaseDate":"2023-03-21","lts":false},{"cycle":"110","releaseDate":"2023-02-14","eol":"2023-03-14","latest":"110.0.1","latestReleaseDate":"2023-02-28","lts":false},{"cycle":"109","releaseDate":"2023-01-17","eol":"2023-02-14","latest":"109.0.1","latestReleaseDate":"2023-01-31","lts":false},{"cycle":"108","releaseDate":"2022-12-13","eol":"2023-01-17","latest":"108.0.2","latestReleaseDate":"2023-01-05","lts":false},{"cycle":"107","releaseDate":"2022-11-15","eol":"2022-12-13","latest":"107.0.1","latestReleaseDate":"2022-11-29","lts":false},{"cycle":"106","releaseDate":"2022-10-18","eol":"2022-11-15","latest":"106.0.5","latestReleaseDate":"2022-11-04","lts":false},{"cycle":"105","releaseDate":"2022-09-20","eol":"2022-10-18","latest":"105.0.3","latestReleaseDate":"2022-10-07","lts":false},{"cycle":"104","releaseDate":"2022-08-23","eol":"2022-09-20","latest":"104.0.2","latestReleaseDate":"2022-09-06","lts":false},{"cycle":"103","releaseDate":"2022-07-26","eol":"2022-08-23","latest":"103.0.2","latestReleaseDate":"2022-08-09","lts":false},{"cycle":"102","lts":true,"releaseDate":"2022-06-28","eol":"2023-09-26","latest":"102.15.1","latestReleaseDate":"2023-09-12"},{"cycle":"91","lts":true,"releaseDate":"2021-08-10","eol":"2022-09-20","latest":"91.13.0","latestReleaseDate":"2022-08-23"},{"cycle":"78","lts":true,"releaseDate":"2020-06-30","eol":"2021-11-02","latest":"78.15.0","latestReleaseDate":"2021-10-05"}]
-,
+[
+  {
+    "cycle": "125",
+    "releaseDate": "2024-04-16",
+    "eol": false,
+    "latest": "125.0.3",
+    "latestReleaseDate": "2024-04-29",
+    "lts": false
+  },
+  {
+    "cycle": "124",
+    "releaseDate": "2024-03-19",
+    "eol": "2024-04-16",
+    "latest": "124.0.2",
+    "latestReleaseDate": "2024-04-02",
+    "lts": false
+  },
+  {
+    "cycle": "123",
+    "releaseDate": "2024-02-20",
+    "eol": "2024-03-19",
+    "latest": "123.0.1",
+    "latestReleaseDate": "2024-03-05",
+    "lts": false
+  },
+  {
+    "cycle": "122",
+    "releaseDate": "2024-01-23",
+    "eol": "2024-02-20",
+    "latest": "122.0.1",
+    "latestReleaseDate": "2024-02-06",
+    "lts": false
+  },
+  {
+    "cycle": "121",
+    "releaseDate": "2023-12-19",
+    "eol": "2024-01-23",
+    "latest": "121.0.1",
+    "latestReleaseDate": "2024-01-09",
+    "lts": false
+  },
+  {
+    "cycle": "120",
+    "releaseDate": "2023-11-21",
+    "eol": "2023-12-19",
+    "latest": "120.0.1",
+    "latestReleaseDate": "2023-11-30",
+    "lts": false
+  },
+  {
+    "cycle": "119",
+    "releaseDate": "2023-10-24",
+    "eol": "2023-11-21",
+    "latest": "119.0.1",
+    "latestReleaseDate": "2023-11-07",
+    "lts": false
+  },
+  {
+    "cycle": "118",
+    "releaseDate": "2023-09-26",
+    "eol": "2023-10-24",
+    "latest": "118.0.2",
+    "latestReleaseDate": "2023-10-10",
+    "lts": false
+  },
+  {
+    "cycle": "117",
+    "releaseDate": "2023-08-29",
+    "eol": "2023-09-26",
+    "latest": "117.0.1",
+    "latestReleaseDate": "2023-09-12",
+    "lts": false
+  },
+  {
+    "cycle": "116",
+    "releaseDate": "2023-08-01",
+    "eol": "2023-08-29",
+    "latest": "116.0.3",
+    "latestReleaseDate": "2023-08-16",
+    "lts": false
+  },
+  {
+    "cycle": "115",
+    "lts": true,
+    "releaseDate": "2023-07-04",
+    "eol": "2024-10-01",
+    "latest": "115.10.0",
+    "latestReleaseDate": "2024-04-16"
+  },
+  {
+    "cycle": "114",
+    "releaseDate": "2023-06-06",
+    "eol": "2023-07-04",
+    "latest": "114.0.2",
+    "latestReleaseDate": "2023-06-20",
+    "lts": false
+  },
+  {
+    "cycle": "113",
+    "releaseDate": "2023-05-09",
+    "eol": "2023-06-06",
+    "latest": "113.0.2",
+    "latestReleaseDate": "2023-05-23",
+    "lts": false
+  },
+  {
+    "cycle": "112",
+    "releaseDate": "2023-04-11",
+    "eol": "2023-05-09",
+    "latest": "112.0.2",
+    "latestReleaseDate": "2023-04-25",
+    "lts": false
+  },
+  {
+    "cycle": "111",
+    "releaseDate": "2023-03-14",
+    "eol": "2023-04-11",
+    "latest": "111.0.1",
+    "latestReleaseDate": "2023-03-21",
+    "lts": false
+  },
+  {
+    "cycle": "110",
+    "releaseDate": "2023-02-14",
+    "eol": "2023-03-14",
+    "latest": "110.0.1",
+    "latestReleaseDate": "2023-02-28",
+    "lts": false
+  },
+  {
+    "cycle": "109",
+    "releaseDate": "2023-01-17",
+    "eol": "2023-02-14",
+    "latest": "109.0.1",
+    "latestReleaseDate": "2023-01-31",
+    "lts": false
+  },
+  {
+    "cycle": "108",
+    "releaseDate": "2022-12-13",
+    "eol": "2023-01-17",
+    "latest": "108.0.2",
+    "latestReleaseDate": "2023-01-05",
+    "lts": false
+  },
+  {
+    "cycle": "107",
+    "releaseDate": "2022-11-15",
+    "eol": "2022-12-13",
+    "latest": "107.0.1",
+    "latestReleaseDate": "2022-11-29",
+    "lts": false
+  },
+  {
+    "cycle": "106",
+    "releaseDate": "2022-10-18",
+    "eol": "2022-11-15",
+    "latest": "106.0.5",
+    "latestReleaseDate": "2022-11-04",
+    "lts": false
+  },
+  {
+    "cycle": "105",
+    "releaseDate": "2022-09-20",
+    "eol": "2022-10-18",
+    "latest": "105.0.3",
+    "latestReleaseDate": "2022-10-07",
+    "lts": false
+  },
+  {
+    "cycle": "104",
+    "releaseDate": "2022-08-23",
+    "eol": "2022-09-20",
+    "latest": "104.0.2",
+    "latestReleaseDate": "2022-09-06",
+    "lts": false
+  },
+  {
+    "cycle": "103",
+    "releaseDate": "2022-07-26",
+    "eol": "2022-08-23",
+    "latest": "103.0.2",
+    "latestReleaseDate": "2022-08-09",
+    "lts": false
+  },
+  {
+    "cycle": "102",
+    "lts": true,
+    "releaseDate": "2022-06-28",
+    "eol": "2023-09-26",
+    "latest": "102.15.1",
+    "latestReleaseDate": "2023-09-12"
+  },
+  {
+    "cycle": "91",
+    "lts": true,
+    "releaseDate": "2021-08-10",
+    "eol": "2022-09-20",
+    "latest": "91.13.0",
+    "latestReleaseDate": "2022-08-23"
+  },
+  {
+    "cycle": "78",
+    "lts": true,
+    "releaseDate": "2020-06-30",
+    "eol": "2021-11-02",
+    "latest": "78.15.0",
+    "latestReleaseDate": "2021-10-05"
+  }
+],
 chrome: 
 [
   {
