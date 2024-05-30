@@ -5,8 +5,8 @@ firefox:
     "cycle": "126",
     "releaseDate": "2024-05-14",
     "eol": false,
-    "latest": "126.0",
-    "latestReleaseDate": "2024-05-14",
+    "latest": "126.0.1",
+    "latestReleaseDate": "2024-05-28",
     "lts": false
   },
   {
@@ -223,6 +223,26 @@ firefox:
 chrome: 
 [
   {
+    "version": "125.0.6422.78",
+    "milestone": 125,
+    "date": "2024-5-23"
+  },
+  {
+    "version": "125.0.6422.77",
+    "milestone": 125,
+    "date": "2024-5-23"
+  },
+  {
+    "version": "125.0.6422.76",
+    "milestone": 125,
+    "date": "2024-5-21"
+  },
+  {
+    "version": "125.0.6422.61",
+    "milestone": 125,
+    "date": "2024-5-15"
+  },
+  {
     "version": "125.0.6422.60",
     "milestone": 125,
     "date": "2024-5-15"
@@ -231,6 +251,16 @@ chrome:
     "version": "125.0.6422.41",
     "milestone": 125,
     "date": "2024-5-8"
+  },
+  {
+    "version": "125.0.6422.113",
+    "milestone": 125,
+    "date": "2024-5-23"
+  },
+  {
+    "version": "125.0.6422.112",
+    "milestone": 125,
+    "date": "2024-5-23"
   },
   {
     "version": "124.0.6367.93",
@@ -271,6 +301,11 @@ chrome:
     "version": "124.0.6367.60",
     "milestone": 124,
     "date": "2024-4-15"
+  },
+  {
+    "version": "124.0.6367.210",
+    "milestone": 124,
+    "date": "2024-5-21"
   },
   {
     "version": "124.0.6367.209",
@@ -629,7 +664,12 @@ edge:
     "milestone": "Version"
   },
   {
-    "date": "16-May-2024",
+    "date": "13-Jun-2024",
+    "isExtended": true,
+    "milestone": "126"
+  },
+  {
+    "date": "17-May-2024",
     "milestone": "125"
   },
   {
