@@ -131,13 +131,23 @@ function get_browser_info(browser_releaseDates, ua) {
             add_chrome_edge_eol(resp)
         }
     } else if (resp.name === 'Safari') {
-        let versions = Object.keys(browser_releaseDates.safari).filter(v => (
-            version_compare(resp.major, v) <= 0 && version_compare(resp.full_version, v) >= 0
+        let major_versions = Object.keys(browser_releaseDates.safari).filter(v => (
+            version_compare(major, v) <= 0 && version_compare(major + 1, v) > 0
         ))
-        if (versions.length) {
-            let dates = versions.map(v => new Date(browser_releaseDates.safari[v]))
-            resp.firstReleaseDate = new Date(Math.min.apply(null, dates))
-            resp.latestReleaseDate = new Date(Math.max.apply(null, dates))
+        let versions = Object.keys(browser_releaseDates.safari).filter(v => (
+            version_compare(major, v) <= 0 && version_compare(resp.full_version, v) >= 0
+        ))
+        versions.sort(version_compare).reverse()
+        if (major_versions.length) {
+            let major_dates = major_versions.map(v => new Date(browser_releaseDates.safari[v]))
+            resp.firstReleaseDate = new Date(Math.min.apply(null, major_dates))
+            resp.latestReleaseDate = new Date(Math.max.apply(null, major_dates))
+            if (versions.length) {
+                const releaseDate = new Date(browser_releaseDates.safari[versions[0]])
+                if (+releaseDate !== +resp.latestReleaseDate) {
+                    resp.releaseDate = releaseDate
+                }
+            }
         }
         if (15 <= major && major <= 16 && !ua.match('Mobile/')) {
             // Chrome & Firefox sont dispo sur MacOS >= 10.15 (Catalina)
@@ -191,19 +201,22 @@ function compute_browser_warnings(require, ua_info, now) {
     } 
     if (ua_info.old_info) {
         msgs.push(`
-            Votre navigateur n'est pas à jour.
             Les mises à jour de sécurité ne sont plus gérées sur cette version de navigateur (${ua_info.old_info}).
         `)
         os_msgs.push(`
             ${os_msgs.length ? 'Sinon veuillez' : 'Veuillez'} mettre à jour vers une nouvelle version majeure.
         `)
-    } else if (ua_info.latestReleaseDate && addDays(ua_info.latestReleaseDate, 6 * one_month) < now) {
+    } else if (ua_info.latestReleaseDate && addDays(ua_info.latestReleaseDate, 5 * one_month) < now) {
         msgs.push(`
-            Votre navigateur n'est pas à jour.
             Les mises à jour de sécurité ne semblent plus être gérées sur cette version de navigateur (dernière mise à jour le ${ua_info.latestReleaseDate.toLocaleDateString()}).
         `)
         os_msgs.push(`
             ${os_msgs.length ? 'Sinon veuillez' : 'Veuillez'} mettre à jour vers une nouvelle version majeure.
+        `)
+    } else if (ua_info.latestReleaseDate && ua_info.releaseDate && addDays(ua_info.releaseDate, one_month) < now) {
+        msgs.push(`
+            Votre navigateur n'est pas à jour.
+            Une mise à jour est disponible.
         `)
     } else if (!os_msgs.length && require === 'recent-browser') {
         msgs.push(`Votre navigateur semble être à jour
