@@ -159,6 +159,7 @@
             if (elt) elt.classList.remove('hidden')
         }
         let ua_info = get_browser_info(browser_releaseDates, ua)
+        console.log(ua_info)
         display_browser_warnings(require, ua_info)
         display_technical_info("clean_ua", ua_info.clean_ua)
 
