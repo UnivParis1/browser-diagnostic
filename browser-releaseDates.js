@@ -231,6 +231,11 @@ firefox:
 chrome: 
 [
   {
+    "version": "126.0.6478.63",
+    "milestone": 126,
+    "date": "2024-6-18"
+  },
+  {
     "version": "126.0.6478.62",
     "milestone": 126,
     "date": "2024-6-13"
@@ -254,6 +259,16 @@ chrome:
     "version": "126.0.6478.36",
     "milestone": 126,
     "date": "2024-6-5"
+  },
+  {
+    "version": "126.0.6478.115",
+    "milestone": 126,
+    "date": "2024-6-18"
+  },
+  {
+    "version": "126.0.6478.114",
+    "milestone": 126,
+    "date": "2024-6-18"
   },
   {
     "version": "125.0.6422.78",
