@@ -40,6 +40,16 @@
 </header>
 <body>
   <div class="body">
+    <div id="require--less-cookies--failure" class="require-msg hidden">
+        Votre navigateur semble avoir trop de cookies partagés entre les applications de l'université Paris 1</b>
+        <p></p>
+        Nous vous invitons à nettoyer vos cookies
+    </div>
+    <div id="require--less-cookies--success" class="require-msg hidden">
+        Votre navigateur semblait avoir trop de cookies partagés entre les applications de l'université Paris 1</b>
+        <p></p>
+        Nous avons réussi un nettoyage automatique. Vous pouvez ré-essayer d'accéder à l'application.
+    </div>
     <div id="require--recent-browser" class="require-msg hidden">
         Votre navigateur n'est pas compatible avec cette application.</b>
     </div>
@@ -77,6 +87,7 @@
     <script src="node_modules/parse-user-agent/index.js"></script>
     <script src="lib.js?v=2024-05-13"></script>
     <script src="conf.js"></script>
+    <script src="https://ent.univ-paris1.fr/assets/outils/may_cleanup_too_many_cookies_on_domain.js"></script>
     <script>
         function display_technical_info(id, val) {
             if (val) {
@@ -136,7 +147,15 @@
         }
         if (require) {
             document.title = "Accès interdit ou erreur navigateur"
-            let elt = document.getElementById(`require--${require}`)
+            let require_subid = ''
+            if (require === 'less-cookies') {
+                const details = may_cleanup_too_many_cookies_on_domain()
+                require_subid = '--' + (details ? 'success' : 'failure')
+                if (details) {
+                    fetch("https://perdu.univ-paris1.fr/log.php?cleanup_too_many_cookies_on_domain&ignored=" + details.ignored + "&removed=" + details.size_removed + details.failed.map(function (one) { return "&failed=" + encodeURIComponent(one) }).join(""))
+                }
+            }
+            let elt = document.getElementById(`require--${require}${require_subid}`)
             if (elt) elt.classList.remove('hidden')
         }
         let ua_info = get_browser_info(browser_releaseDates, ua)
