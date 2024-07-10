@@ -1,0 +1,18 @@
+{
+  "name": "browser-diagnostic",
+  "version": "1.0.0",
+  "description": "",
+  "main": "browser-releaseDates.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/UnivParis1/browser-diagnostic.git"
+  },
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/UnivParis1/browser-diagnostic/issues"
+  },
+  "homepage": "https://github.com/UnivParis1/browser-diagnostic#readme",
+  "dependencies": {
+    "parse-user-agent": "github:UnivParis1/parse-user-agent-js"
+  }
+}
