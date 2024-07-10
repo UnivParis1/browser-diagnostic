@@ -1,7 +1,3 @@
-function escapeHTML(str) {
-    return new Option(str).innerHTML;
-}
-
 function addDays(date, days) {
     let r = new Date(date);
     r.setTime(r.getTime() + days * 60 * 60 * 24 * 1000);
