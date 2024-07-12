@@ -2,9 +2,17 @@ browser_releaseDates = {
 firefox: 
 [
   {
+    "cycle": "128",
+    "releaseDate": "2024-07-09",
+    "lts": true,
+    "eol": false,
+    "latest": "128.0",
+    "latestReleaseDate": "2024-07-09"
+  },
+  {
     "cycle": "127",
     "releaseDate": "2024-06-11",
-    "eol": false,
+    "eol": "2024-07-09",
     "latest": "127.0.2",
     "latestReleaseDate": "2024-06-25",
     "lts": false
@@ -748,7 +756,8 @@ samsungbrowser:
   "25.0.0.41": "Apr 24, 2024",
   "25.0.1.3": "May 9, 2024",
   "26.0.0.42": "Jun 9, 2024",
-  "26.0.0.52": "Jul 2, 2024"
+  "26.0.0.52": "Jul 2, 2024",
+  "26.0.1.3": "Jul 12, 2024"
 }
 
 ,
