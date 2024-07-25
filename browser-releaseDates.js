@@ -6,8 +6,8 @@ firefox:
     "releaseDate": "2024-07-09",
     "lts": true,
     "eol": false,
-    "latest": "128.0",
-    "latestReleaseDate": "2024-07-09"
+    "latest": "128.0.2",
+    "latestReleaseDate": "2024-07-23"
   },
   {
     "cycle": "127",
