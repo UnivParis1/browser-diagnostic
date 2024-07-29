@@ -6,8 +6,8 @@ firefox:
     "releaseDate": "2024-07-09",
     "lts": true,
     "eol": false,
-    "latest": "128.0.2",
-    "latestReleaseDate": "2024-07-23"
+    "latest": "128.0.3",
+    "latestReleaseDate": "2024-07-26"
   },
   {
     "cycle": "127",
@@ -797,7 +797,8 @@ samsungbrowser:
   "25.0.1.3": "May 9, 2024",
   "26.0.0.42": "Jun 9, 2024",
   "26.0.0.52": "Jul 2, 2024",
-  "26.0.1.3": "Jul 12, 2024"
+  "26.0.1.3": "Jul 12, 2024",
+  "26.0.8.1": "Jul 29, 2024"
 }
 
 ,
