@@ -239,6 +239,21 @@ firefox:
 chrome: 
 [
   {
+    "version": "127.0.6533.89",
+    "milestone": 127,
+    "date": "2024-7-30"
+  },
+  {
+    "version": "127.0.6533.88",
+    "milestone": 127,
+    "date": "2024-7-30"
+  },
+  {
+    "version": "127.0.6533.74",
+    "milestone": 127,
+    "date": "2024-7-30"
+  },
+  {
     "version": "127.0.6533.73",
     "milestone": 127,
     "date": "2024-7-23"
