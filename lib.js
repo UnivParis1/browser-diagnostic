@@ -41,7 +41,6 @@ function get_browser_info(browser_releaseDates, ua) {
         } else if (major < 78) {
             resp.old_info = 'depuis au moins 3 ans'
         }
-        // encore un peu de temps pour les Windows 7-8 grace à l'ESR : https://www.mozilla.org/en-US/firefox/115.0esr/system-requirements/
     } else if (resp.name === 'Chrome' || resp.name === 'Chrome_iOS') {
         let matches = browser_releaseDates.chrome.filter(info => info.milestone === major)
         if (!matches.length) {
@@ -60,7 +59,7 @@ function get_browser_info(browser_releaseDates, ua) {
         }
         if (major <= 109 && ua.match(/Win64/)) {        
             // https://support.google.com/chrome/a/answer/7100626?hl=en
-            resp.suggest_windows_firefox_ESR = true
+            resp.suggest_windows_upgrade = true
         }
         if (major <= 117 && ua.match(/Mac OS X/)) {        
             resp.suggest_macos_upgrade = true
@@ -129,10 +128,10 @@ function compute_browser_warnings(require, ua_info, now) {
             nous vous invitons à mettre à jour votre système d'exploitation. Mais vous pouvez aussi installer les dernières version de Chrome ou Firefox.
         `)
     }
-    if (ua_info.suggest_windows_firefox_ESR) {
+    if (ua_info.suggest_windows_upgrade) {
         os_msgs.push(`
             Si vous avez un Windows 7 ou 8,
-            nous vous invitons à mettre à jour votre système d'exploitation. Mais vous pouvez aussi installer Firefox ESR.
+            nous vous invitons à mettre à jour votre système d'exploitation.
         `)
     }
 
