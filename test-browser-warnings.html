@@ -38,7 +38,7 @@
     )    
     add_test( 
         `Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36`,
-        { name: 'Chrome', major: '109', clean_ua: '(Windows NT 6.3; x64) Chrome/109', old_info: 'depuis au moins 6 mois', suggest_windows_firefox_ESR: true }
+        { name: 'Chrome', major: '109', clean_ua: '(Windows NT 6.3; x64) Chrome/109', old_info: 'depuis au moins 6 mois', suggest_windows_upgrade: true }
     )
     add_test( 
         `Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.3`,
@@ -63,11 +63,11 @@
     )
     add_test(
         `Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.4.1 Safari/605.1.15`,
-        { name: 'Safari', major: '17', version: '17.4', full_version: '17.4.1', clean_ua: '(Intel Mac OS X) 17.4.1 Safari', firstReleaseDate: new Date('26 sep 2023'), latestReleaseDate: new Date('13 may 2024'), releaseDate: new Date('25 mar 2024') }
+        { name: 'Safari', major: '17', version: '17.4', full_version: '17.4.1', clean_ua: '(Intel Mac OS X) 17.4.1 Safari', firstReleaseDate: new Date('26 sep 2023'), latestReleaseDate: new Date('29 jul 2024'), releaseDate: new Date('25 mar 2024') }
     )
     add_test(
         `Mozilla/5.0 (iPhone; CPU iPhone OS 17_4_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.4.1 Mobile/15E148 Safari/604.`,
-        { "name": "Safari", "major": "17", "version": "17.4", "full_version": "17.4.1", "clean_ua": "(iPhone) 17.4.1 Safari", "firstReleaseDate": new Date("26 sep 2023"), "latestReleaseDate": new Date("13 may 2024"), "releaseDate": new Date("25 mar 2024") }
+        { "name": "Safari", "major": "17", "version": "17.4", "full_version": "17.4.1", "clean_ua": "(iPhone) 17.4.1 Safari", "firstReleaseDate": new Date("26 sep 2023"), "latestReleaseDate": new Date("29 jul 2024"), "releaseDate": new Date("25 mar 2024") }
     )
     add_test(
         `Mozilla/5.0 (iPhone; CPU iPhone OS 16_1_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.1 Mobile/15E148 Safari/604.1`,
@@ -78,6 +78,10 @@
         { name: "Chrome_iOS", major: "124", clean_ua: "(iPhone) CriOS/124.0.6367.111 Safari/604.1", firstReleaseDate: new Date("15 apr 2024"), latestReleaseDate: new Date("21 may 2024"), eol: new Date("10 jun 2024"), isExtended: true }
     )
     add_test(
+        `Mozilla/5.0 (iPad; CPU OS 17_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) EdgiOS/128.0.2739.60 Version/17.0 Mobile/15E148 Safari/604.1`,
+        { "name": "Edge_iOS", "major": "128", "clean_ua": "(iPad; CPU OS 17_6) EdgiOS/128.0.2739.60 Safari/604.1" },
+    )    
+    add_test(
         `Mozilla/5.0 (Macintosh; Intel Mac OS X 14.4; rv:125.0) Gecko/20100101 Firefox/78.0`,
         { name: 'Firefox', major: '78', clean_ua: '(Intel Mac OS X 14.4) Firefox/78.0', firstReleaseDate: new Date("2020-06-30"), latestReleaseDate: new Date('2021-10-05'), eol: new Date('2021-11-02'), suggest_macos_upgrade: true }
     )
@@ -87,7 +91,7 @@
     )
     add_test(
         `Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:91.0) Gecko/20100101 Firefox/115.0`,
-        { name: 'Firefox', major: '115', clean_ua: '(Windows; x64) Firefox/115.0', firstReleaseDate: new Date("2023-07-04"), latestReleaseDate: new Date('2024-05-14'), eol: new Date("2024-10-01") }
+        { name: 'Firefox', major: '115', clean_ua: '(Windows; x64) Firefox/115.0', firstReleaseDate: new Date("2023-07-04"), latestReleaseDate: new Date('2024-06-11'), eol: new Date("2024-10-01") }
     )
     add_test(
         `Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:91.0) Gecko/20100101 Firefox/116.0`,
