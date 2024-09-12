@@ -1,8 +1,11 @@
 function ua_to_name_version(ua) {
-    let m = ua.match(/(Firefox|Chrome|CriOS|Safari|SamsungBrowser)\/(\d+)/) || []
+    let m = ua.match(/(Firefox|Chrome|CriOS|EdgiOS|Safari|SamsungBrowser)\/(\d+)/) || []
     let resp = { name: m[1], major: m[2] }
     if (resp.name === 'CriOS') {
         resp.name = 'Chrome_iOS'
+    }
+    if (resp.name === 'EdgiOS') {
+        resp.name = 'Edge_iOS'
     }
     if (resp.name === 'Chrome') {
         m = ua.match(/Edg\/(\d+)/)
@@ -54,6 +57,8 @@ function parse_user_agent(ua) {
     } else if (resp.name === 'Chrome_iOS') {
         clean_ua = clean_ua.replace(/; CPU iPhone OS [\d_]+/, '')
         clean_ua = clean_ua.replace(/ Mobile[/][\w]+ /, ' ')
+    } else if (resp.name === 'Edge_iOS') {
+        clean_ua = clean_ua.replace(/ Version[/][\d.]+ Mobile[/][\w]+ /, ' ')
     } else if (resp.name === 'Firefox') {
         clean_ua = clean_ua.replace(/; rv:[\d.]+/, '')
         clean_ua = clean_ua.replace(/Gecko\/[\d.]+ /, '')
