@@ -255,6 +255,11 @@ firefox:
 chrome: 
 [
   {
+    "version": "129.0.6668.42",
+    "milestone": 129,
+    "date": "2024-9-11"
+  },
+  {
     "version": "128.0.6613.86",
     "milestone": 128,
     "date": "2024-8-28"
@@ -273,6 +278,26 @@ chrome:
     "version": "128.0.6613.36",
     "milestone": 128,
     "date": "2024-8-14"
+  },
+  {
+    "version": "128.0.6613.138",
+    "milestone": 128,
+    "date": "2024-9-10"
+  },
+  {
+    "version": "128.0.6613.137",
+    "milestone": 128,
+    "date": "2024-9-10"
+  },
+  {
+    "version": "128.0.6613.122",
+    "milestone": 128,
+    "date": "2024-9-11"
+  },
+  {
+    "version": "128.0.6613.121",
+    "milestone": 128,
+    "date": "2024-9-10"
   },
   {
     "version": "128.0.6613.120",
