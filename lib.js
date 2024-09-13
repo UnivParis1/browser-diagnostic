@@ -109,6 +109,25 @@ function get_browser_info(browser_releaseDates, ua) {
     return resp
 }
 
+function weird_cookies() {
+    return document.cookie.split(/; /).filter(s => s.match(/=.* /)).map(s => s.split("=")[0])
+}
+function remove_weird_cookies() {
+    const domain = (document.location.hostname.match(/.*([.].*[.].*)/) || [])[1]
+    for (const name of weird_cookies()) {
+        document.cookie = name + "=; max-age=0; path=/; domain=" + domain
+    }
+    document.location.reload();
+}
+function weird_cookie_warning() {
+    const names = weird_cookies()
+    return names.length ? `
+        Vous avez un cookie « ${names[0]} » avec une valeur étrange. Cela peut poser des problèmes à certaines applications (<a href="https://github.com/IdentityPython/SATOSA/issues/468">exemple</a>).
+        <p></p>
+        <button onclick="remove_weird_cookies()">Essayer de le supprimer</button>
+    ` : null
+}
+
 function compute_browser_warnings(require, ua_info, now) {
 
     let msgs = []
@@ -163,6 +182,11 @@ function compute_browser_warnings(require, ua_info, now) {
         <p></p>
         Communiquez les informations ci-dessous à assistance-dsiun@univ-paris1.fr pour diagnostiquer le problème.
         `)
+    }
+
+    const weird_cookie_warning_ = weird_cookie_warning()
+    if (weird_cookie_warning_) {
+        msgs.push(weird_cookie_warning_)
     }
 
     return msgs.concat(os_msgs)
