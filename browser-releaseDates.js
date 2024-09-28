@@ -255,6 +255,21 @@ firefox:
 chrome: 
 [
   {
+    "version": "129.0.6668.71",
+    "milestone": 129,
+    "date": "2024-9-24"
+  },
+  {
+    "version": "129.0.6668.70",
+    "milestone": 129,
+    "date": "2024-9-24"
+  },
+  {
+    "version": "129.0.6668.60",
+    "milestone": 129,
+    "date": "2024-9-24"
+  },
+  {
     "version": "129.0.6668.59",
     "milestone": 129,
     "date": "2024-9-17"
@@ -967,6 +982,11 @@ edge:
   {
     "date": "Stable Channel",
     "milestone": "Version"
+  },
+  {
+    "date": "17-Oct-2024",
+    "isExtended": true,
+    "milestone": "130"
   },
   {
     "date": "19-Sep-2024",
