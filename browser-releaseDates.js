@@ -5,8 +5,8 @@ firefox:
     "cycle": "131",
     "releaseDate": "2024-10-01",
     "eol": false,
-    "latest": "131.0",
-    "latestReleaseDate": "2024-10-01",
+    "latest": "131.0.2",
+    "latestReleaseDate": "2024-10-09",
     "lts": false
   },
   {
@@ -30,8 +30,8 @@ firefox:
     "lts": true,
     "releaseDate": "2024-07-09",
     "eol": "2025-09-16",
-    "latest": "128.3.0",
-    "latestReleaseDate": "2024-10-01"
+    "latest": "128.3.1",
+    "latestReleaseDate": "2024-10-09"
   },
   {
     "cycle": "127",
@@ -263,6 +263,11 @@ firefox:
 chrome: 
 [
   {
+    "version": "130.0.6723.44",
+    "milestone": 130,
+    "date": "2024-10-9"
+  },
+  {
     "version": "129.0.6668.90",
     "milestone": 129,
     "date": "2024-10-1"
@@ -306,6 +311,11 @@ chrome:
     "version": "129.0.6668.42",
     "milestone": 129,
     "date": "2024-9-11"
+  },
+  {
+    "version": "129.0.6668.102",
+    "milestone": 129,
+    "date": "2024-10-9"
   },
   {
     "version": "129.0.6668.101",
