@@ -263,6 +263,21 @@ firefox:
 chrome: 
 [
   {
+    "version": "130.0.6723.70",
+    "milestone": 130,
+    "date": "2024-10-22"
+  },
+  {
+    "version": "130.0.6723.69",
+    "milestone": 130,
+    "date": "2024-10-22"
+  },
+  {
+    "version": "130.0.6723.60",
+    "milestone": 130,
+    "date": "2024-10-22"
+  },
+  {
     "version": "130.0.6723.59",
     "milestone": 130,
     "date": "2024-10-15"
