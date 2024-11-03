@@ -2,9 +2,17 @@ browser_releaseDates = {
 firefox: 
 [
   {
+    "cycle": "132",
+    "releaseDate": "2024-10-29",
+    "eol": false,
+    "latest": "132.0.0",
+    "latestReleaseDate": "2024-10-29",
+    "lts": false
+  },
+  {
     "cycle": "131",
     "releaseDate": "2024-10-01",
-    "eol": false,
+    "eol": "2024-10-29",
     "latest": "131.0.3",
     "latestReleaseDate": "2024-10-14",
     "lts": false
@@ -30,8 +38,8 @@ firefox:
     "lts": true,
     "releaseDate": "2024-07-09",
     "eol": "2025-09-16",
-    "latest": "128.3.1",
-    "latestReleaseDate": "2024-10-09"
+    "latest": "128.4.0",
+    "latestReleaseDate": "2024-10-29"
   },
   {
     "cycle": "127",
@@ -262,6 +270,21 @@ firefox:
 ,
 chrome: 
 [
+  {
+    "version": "130.0.6723.92",
+    "milestone": 130,
+    "date": "2024-10-29"
+  },
+  {
+    "version": "130.0.6723.91",
+    "milestone": 130,
+    "date": "2024-10-29"
+  },
+  {
+    "version": "130.0.6723.71",
+    "milestone": 130,
+    "date": "2024-10-29"
+  },
   {
     "version": "130.0.6723.70",
     "milestone": 130,
@@ -1004,7 +1027,8 @@ safari:
   "17.5": "13 May 2024",
   "17.6": "29 Jul 2024",
   "18": "16 Sep 2024",
-  "18.0.1": "03 Oct 2024"
+  "18.0.1": "03 Oct 2024",
+  "18.1": "29 Oct 2024"
 }
 
 ,
