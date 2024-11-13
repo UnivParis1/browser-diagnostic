@@ -5,8 +5,8 @@ firefox:
     "cycle": "132",
     "releaseDate": "2024-10-29",
     "eol": false,
-    "latest": "132.0.1",
-    "latestReleaseDate": "2024-11-04",
+    "latest": "132.0.2",
+    "latestReleaseDate": "2024-11-12",
     "lts": false
   },
   {
@@ -271,6 +271,16 @@ firefox:
 chrome: 
 [
   {
+    "version": "131.0.6778.70",
+    "milestone": 131,
+    "date": "2024-11-12"
+  },
+  {
+    "version": "131.0.6778.69",
+    "milestone": 131,
+    "date": "2024-11-12"
+  },
+  {
     "version": "131.0.6778.33",
     "milestone": 131,
     "date": "2024-11-6"
@@ -324,6 +334,11 @@ chrome:
     "version": "130.0.6723.44",
     "milestone": 130,
     "date": "2024-10-9"
+  },
+  {
+    "version": "130.0.6723.119",
+    "milestone": 130,
+    "date": "2024-11-12"
   },
   {
     "version": "130.0.6723.118",
@@ -1096,7 +1111,8 @@ samsungbrowser:
   "26.0.1.3": "Jul 12, 2024",
   "26.0.3.7": "Aug 29, 2024",
   "26.0.8.1": "Jul 29, 2024",
-  "27.0.0.57": "Sep 8, 2024"
+  "27.0.0.57": "Sep 8, 2024",
+  "27.0.0.79": "Nov 10, 2024"
 }
 
 ,
