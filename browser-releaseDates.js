@@ -287,6 +287,11 @@ firefox:
 chrome: 
 [
   {
+    "version": "133.0.6943.35",
+    "milestone": 133,
+    "date": "2025-1-29"
+  },
+  {
     "version": "132.0.6834.84",
     "milestone": 132,
     "date": "2025-1-14"
@@ -295,6 +300,11 @@ chrome:
     "version": "132.0.6834.83",
     "milestone": 132,
     "date": "2025-1-8"
+  },
+  {
+    "version": "132.0.6834.161",
+    "milestone": 132,
+    "date": "2025-1-29"
   },
   {
     "version": "132.0.6834.160",
