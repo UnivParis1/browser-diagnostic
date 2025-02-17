@@ -295,6 +295,16 @@ firefox:
 chrome: 
 [
   {
+    "version": "133.0.6943.99",
+    "milestone": 133,
+    "date": "2025-2-12"
+  },
+  {
+    "version": "133.0.6943.98",
+    "milestone": 133,
+    "date": "2025-2-12"
+  },
+  {
     "version": "133.0.6943.60",
     "milestone": 133,
     "date": "2025-2-6"
@@ -328,6 +338,11 @@ chrome:
     "version": "132.0.6834.83",
     "milestone": 132,
     "date": "2025-1-8"
+  },
+  {
+    "version": "132.0.6834.197",
+    "milestone": 132,
+    "date": "2025-2-12"
   },
   {
     "version": "132.0.6834.196",
@@ -1309,6 +1324,11 @@ edge:
   {
     "date": "Stable Channel",
     "milestone": "Version"
+  },
+  {
+    "date": "06-Mar-2025",
+    "isExtended": true,
+    "milestone": "134"
   },
   {
     "date": "06-Feb-2025",
