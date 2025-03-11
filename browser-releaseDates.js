@@ -303,6 +303,21 @@ firefox:
 chrome: 
 [
   {
+    "version": "134.0.6998.89",
+    "milestone": 134,
+    "date": "2025-3-10"
+  },
+  {
+    "version": "134.0.6998.88",
+    "milestone": 134,
+    "date": "2025-3-10"
+  },
+  {
+    "version": "134.0.6998.37",
+    "milestone": 134,
+    "date": "2025-3-10"
+  },
+  {
     "version": "134.0.6998.36",
     "milestone": 134,
     "date": "2025-3-4"
