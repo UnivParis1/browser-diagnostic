@@ -5,8 +5,8 @@ firefox:
     "cycle": "136",
     "releaseDate": "2025-03-04",
     "eol": false,
-    "latest": "136.0",
-    "latestReleaseDate": "2025-03-04",
+    "latest": "136.0.1",
+    "latestReleaseDate": "2025-03-11",
     "lts": false
   },
   {
@@ -1338,7 +1338,8 @@ safari:
   "18.1": "29 Oct 2024",
   "18.1.1": "19 Nov 2024",
   "18.2": "11 Dec 2024",
-  "18.3": "27 Jan 2025"
+  "18.3": "27 Jan 2025",
+  "18.3.1": "11 Mar 2025"
 }
 
 ,
