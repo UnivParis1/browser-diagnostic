@@ -5,8 +5,8 @@ firefox:
     "cycle": "136",
     "releaseDate": "2025-03-04",
     "eol": false,
-    "latest": "136.0.3",
-    "latestReleaseDate": "2025-03-25",
+    "latest": "136.0.4",
+    "latestReleaseDate": "2025-03-27",
     "lts": false
   },
   {
@@ -70,8 +70,8 @@ firefox:
     "lts": true,
     "releaseDate": "2024-07-09",
     "eol": "2025-09-16",
-    "latest": "128.8.0",
-    "latestReleaseDate": "2025-03-04"
+    "latest": "128.8.1",
+    "latestReleaseDate": "2025-03-27"
   },
   {
     "cycle": "127",
