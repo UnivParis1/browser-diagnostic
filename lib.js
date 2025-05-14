@@ -89,12 +89,24 @@ function get_browser_info(browser_releaseDates, ua) {
                 }
             }
         }
-        if (15 <= major && major <= 16 && !ua.match('Mobile/')) {
-            // Chrome & Firefox sont dispo sur MacOS >= 10.15 (Catalina)
-            // Un MacOS Catalina à jour a Safari 15 (mais un MacOS Catalina non à jour aura Safari >= 13)
-            resp.suggest_macos_firefox_chrome = true
-        } else if (major < 15 && !ua.match('Mobile/')) {
-            resp.suggest_macos_upgrade = true
+        if (!ua.match('Mobile/')) {
+            // Chrome est dispo sur MacOS >= 11 (Big Sur) https://en.wikipedia.org/wiki/Template:Google_Chrome_release_compatibility
+            // Firefox sont dispo sur MacOS >= 10.15 (Catalina) https://www.mozilla.org/en-US/firefox/system-requirements/
+
+            // Un MacOS à jour a :
+            // - 18 pour 13(Ventura) / 14(Sonoma)
+            // - 17 pour 12(Monterey) / 13(Ventura)
+            // - 16 pour 11(Big Sur) / 12(Monterey)
+            // - 15 pour 10.15(Catalina) / 11(Big Sur)
+            if (major >= 18) {
+                // ok
+            } else if (major >= 16) {
+                resp.suggest_macos_firefox_chrome = true
+            } else if (major >= 15) {
+                resp.suggest_macos_firefox = true
+            } else {
+                resp.suggest_macos_upgrade = true
+            }
         }
     } else if (resp.name === 'SamsungBrowser') {
         let versions = Object.keys(browser_releaseDates.samsungbrowser).filter(v => (
@@ -141,9 +153,15 @@ function compute_browser_warnings(require, ua_info, now) {
         `)
     }
 
+    if (ua_info.suggest_macos_upgrade || ua_info.suggest_macos_firefox) {
+        os_msgs.push(`
+            Si vous avez un MacOS 10.15 <small>(Catalina)</small>,
+            nous vous invitons à mettre à jour votre système d'exploitation. Mais vous pouvez aussi installer les dernières version de Firefox.
+        `)
+    }
     if (ua_info.suggest_macos_upgrade || ua_info.suggest_macos_firefox_chrome) {
         os_msgs.push(`
-            Si vous avez un MacOS 10.15 ou 11 <small>(Catalina, Big Sur)</small>,
+            Si vous avez un MacOS 11/12/13 <small>(Big Sur, Monterey, Ventura)</small>,
             nous vous invitons à mettre à jour votre système d'exploitation. Mais vous pouvez aussi installer les dernières version de Chrome ou Firefox.
         `)
     }
