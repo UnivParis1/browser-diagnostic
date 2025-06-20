@@ -327,6 +327,11 @@ firefox:
 chrome: 
 [
   {
+    "version": "138.0.7204.35",
+    "milestone": 138,
+    "date": "2025-6-18"
+  },
+  {
     "version": "137.0.7151.70",
     "milestone": 137,
     "date": "2025-6-10"
@@ -365,6 +370,26 @@ chrome:
     "version": "137.0.7151.40",
     "milestone": 137,
     "date": "2025-5-21"
+  },
+  {
+    "version": "137.0.7151.121",
+    "milestone": 137,
+    "date": "2025-6-18"
+  },
+  {
+    "version": "137.0.7151.120",
+    "milestone": 137,
+    "date": "2025-6-17"
+  },
+  {
+    "version": "137.0.7151.119",
+    "milestone": 137,
+    "date": "2025-6-17"
+  },
+  {
+    "version": "137.0.7151.105",
+    "milestone": 137,
+    "date": "2025-6-17"
   },
   {
     "version": "137.0.7151.104",
