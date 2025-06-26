@@ -2,9 +2,17 @@ browser_releaseDates = {
 firefox: 
 [
   {
+    "cycle": "140",
+    "releaseDate": "2025-06-24",
+    "eol": false,
+    "latest": "140.0.0",
+    "latestReleaseDate": "2025-06-24",
+    "lts": false
+  },
+  {
     "cycle": "139",
     "releaseDate": "2025-05-27",
-    "eol": false,
+    "eol": "2025-06-24",
     "latest": "139.0.4",
     "latestReleaseDate": "2025-06-10",
     "lts": false
@@ -94,8 +102,8 @@ firefox:
     "lts": true,
     "releaseDate": "2024-07-09",
     "eol": "2025-09-16",
-    "latest": "128.11.0",
-    "latestReleaseDate": "2025-05-27"
+    "latest": "128.12.0",
+    "latestReleaseDate": "2025-06-24"
   },
   {
     "cycle": "127",
@@ -327,6 +335,16 @@ firefox:
 chrome: 
 [
   {
+    "version": "138.0.7204.50",
+    "milestone": 138,
+    "date": "2025-6-24"
+  },
+  {
+    "version": "138.0.7204.49",
+    "milestone": 138,
+    "date": "2025-6-24"
+  },
+  {
     "version": "138.0.7204.35",
     "milestone": 138,
     "date": "2025-6-18"
@@ -370,6 +388,11 @@ chrome:
     "version": "137.0.7151.40",
     "milestone": 137,
     "date": "2025-5-21"
+  },
+  {
+    "version": "137.0.7151.122",
+    "milestone": 137,
+    "date": "2025-6-24"
   },
   {
     "version": "137.0.7151.121",
