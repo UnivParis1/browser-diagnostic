@@ -3,11 +3,11 @@ firefox:
 [
   {
     "cycle": "140",
+    "lts": true,
     "releaseDate": "2025-06-24",
-    "eol": false,
-    "latest": "140.0.0",
-    "latestReleaseDate": "2025-06-24",
-    "lts": false
+    "eol": "2026-09-16",
+    "latest": "140.0.2",
+    "latestReleaseDate": "2025-06-27"
   },
   {
     "cycle": "139",
@@ -1679,7 +1679,7 @@ edge:
     "milestone": "Version"
   },
   {
-    "date": "26-Jun-2025",
+    "date": "26-June-2025",
     "isExtended": true,
     "milestone": "138"
   },
