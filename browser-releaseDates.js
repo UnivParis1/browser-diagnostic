@@ -1694,6 +1694,10 @@ edge:
     "milestone": "Version"
   },
   {
+    "date": "07-Aug-2025",
+    "milestone": "139"
+  },
+  {
     "date": "26-June-2025",
     "isExtended": true,
     "milestone": "138"
