@@ -2,12 +2,28 @@ browser_releaseDates = {
 firefox: 
 [
   {
+    "cycle": "142",
+    "releaseDate": "2025-08-19",
+    "eol": false,
+    "latest": "142.0",
+    "latestReleaseDate": "2025-08-19",
+    "lts": false
+  },
+  {
+    "cycle": "141",
+    "releaseDate": "2025-07-22",
+    "eol": "2025-08-19",
+    "latest": "141.0.3",
+    "latestReleaseDate": "2025-08-07",
+    "lts": false
+  },
+  {
     "cycle": "140",
     "lts": true,
     "releaseDate": "2025-06-24",
     "eol": "2026-09-16",
-    "latest": "140.0.4",
-    "latestReleaseDate": "2025-07-08"
+    "latest": "140.2.0",
+    "latestReleaseDate": "2025-08-19"
   },
   {
     "cycle": "139",
@@ -102,8 +118,8 @@ firefox:
     "lts": true,
     "releaseDate": "2024-07-09",
     "eol": "2025-09-16",
-    "latest": "128.12.0",
-    "latestReleaseDate": "2025-06-24"
+    "latest": "128.14.0",
+    "latestReleaseDate": "2025-08-19"
   },
   {
     "cycle": "127",
@@ -335,6 +351,46 @@ firefox:
 chrome: 
 [
   {
+    "version": "139.0.7258.68",
+    "milestone": 139,
+    "date": "2025-8-12"
+  },
+  {
+    "version": "139.0.7258.67",
+    "milestone": 139,
+    "date": "2025-8-5"
+  },
+  {
+    "version": "139.0.7258.66",
+    "milestone": 139,
+    "date": "2025-7-30"
+  },
+  {
+    "version": "139.0.7258.139",
+    "milestone": 139,
+    "date": "2025-8-19"
+  },
+  {
+    "version": "139.0.7258.138",
+    "milestone": 139,
+    "date": "2025-8-19"
+  },
+  {
+    "version": "139.0.7258.129",
+    "milestone": 139,
+    "date": "2025-8-19"
+  },
+  {
+    "version": "139.0.7258.128",
+    "milestone": 139,
+    "date": "2025-8-12"
+  },
+  {
+    "version": "139.0.7258.127",
+    "milestone": 139,
+    "date": "2025-8-12"
+  },
+  {
     "version": "138.0.7204.98",
     "milestone": 138,
     "date": "2025-7-8"
@@ -368,6 +424,41 @@ chrome:
     "version": "138.0.7204.35",
     "milestone": 138,
     "date": "2025-6-18"
+  },
+  {
+    "version": "138.0.7204.185",
+    "milestone": 138,
+    "date": "2025-7-30"
+  },
+  {
+    "version": "138.0.7204.184",
+    "milestone": 138,
+    "date": "2025-7-29"
+  },
+  {
+    "version": "138.0.7204.183",
+    "milestone": 138,
+    "date": "2025-7-29"
+  },
+  {
+    "version": "138.0.7204.170",
+    "milestone": 138,
+    "date": "2025-7-29"
+  },
+  {
+    "version": "138.0.7204.169",
+    "milestone": 138,
+    "date": "2025-7-22"
+  },
+  {
+    "version": "138.0.7204.168",
+    "milestone": 138,
+    "date": "2025-7-22"
+  },
+  {
+    "version": "138.0.7204.159",
+    "milestone": 138,
+    "date": "2025-7-22"
   },
   {
     "version": "138.0.7204.158",
@@ -1668,7 +1759,8 @@ safari:
   "18.3": "27 Jan 2025",
   "18.3.1": "11 Mar 2025",
   "18.4": "31 Mar 2025",
-  "18.5": "12 May 2025"
+  "18.5": "12 May 2025",
+  "18.6": "30 Jul 2025"
 }
 
 ,
@@ -1718,243 +1810,7 @@ samsungbrowser:
 
 ,
 edge: 
-[
-  {
-    "date": "Stable Channel",
-    "milestone": "Version"
-  },
-  {
-    "date": "07-Aug-2025",
-    "milestone": "139"
-  },
-  {
-    "date": "26-June-2025",
-    "isExtended": true,
-    "milestone": "138"
-  },
-  {
-    "date": "29-May-2025",
-    "milestone": "137"
-  },
-  {
-    "date": "01-May-2025",
-    "isExtended": true,
-    "milestone": "136"
-  },
-  {
-    "date": "3-April-2025",
-    "milestone": "135"
-  },
-  {
-    "date": "6-March-2025",
-    "isExtended": true,
-    "milestone": "134"
-  },
-  {
-    "date": "06-Feb-2025",
-    "milestone": "133"
-  },
-  {
-    "date": "17-Jan-2025",
-    "isExtended": true,
-    "milestone": "132"
-  },
-  {
-    "date": "14-Nov-2024",
-    "milestone": "131"
-  },
-  {
-    "date": "17-Oct-2024",
-    "isExtended": true,
-    "milestone": "130"
-  },
-  {
-    "date": "19-Sep-2024",
-    "milestone": "129"
-  },
-  {
-    "date": "22-Aug-2024",
-    "isExtended": true,
-    "milestone": "128"
-  },
-  {
-    "date": "25-Jul-2024",
-    "milestone": "127"
-  },
-  {
-    "date": "13-Jun-2024",
-    "isExtended": true,
-    "milestone": "126"
-  },
-  {
-    "date": "17-May-2024",
-    "milestone": "125"
-  },
-  {
-    "date": "18-Apr-2024",
-    "isExtended": true,
-    "milestone": "124"
-  },
-  {
-    "date": "22-Mar-2024",
-    "milestone": "123"
-  },
-  {
-    "date": "23-Feb-2024",
-    "isExtended": true,
-    "milestone": "122"
-  },
-  {
-    "date": "25-Jan-2024",
-    "milestone": "121"
-  },
-  {
-    "date": "07-Dec-2023",
-    "isExtended": true,
-    "milestone": "120"
-  },
-  {
-    "date": "02-Nov-2023",
-    "milestone": "119"
-  },
-  {
-    "date": "13-Oct-2023",
-    "isExtended": true,
-    "milestone": "118"
-  },
-  {
-    "date": "15-Sep-2023",
-    "milestone": "117"
-  },
-  {
-    "date": "21-Aug-2023",
-    "isExtended": true,
-    "milestone": "116"
-  },
-  {
-    "date": "21-Jul-2023",
-    "milestone": "115"
-  },
-  {
-    "date": "02-Jun-2023",
-    "isExtended": true,
-    "milestone": "114"
-  },
-  {
-    "date": "05-May-2023",
-    "milestone": "113"
-  },
-  {
-    "date": "06-Apr-2023",
-    "isExtended": true,
-    "milestone": "112"
-  },
-  {
-    "date": "13-Mar-2023",
-    "milestone": "111"
-  },
-  {
-    "date": "09-Feb-2023",
-    "isExtended": true,
-    "milestone": "110"
-  },
-  {
-    "date": "12-Jan-2023",
-    "milestone": "109"
-  },
-  {
-    "date": "05-Dec-2022",
-    "isExtended": true,
-    "milestone": "108"
-  },
-  {
-    "date": "27-Oct-2022",
-    "milestone": "107"
-  },
-  {
-    "date": "03-Oct-2022",
-    "isExtended": true,
-    "milestone": "106"
-  },
-  {
-    "date": "01-Sep-2022",
-    "milestone": "105"
-  },
-  {
-    "date": "05-Aug-2022",
-    "isExtended": true,
-    "milestone": "104"
-  },
-  {
-    "date": "23-Jun-2022",
-    "milestone": "103"
-  },
-  {
-    "date": "31-May-2022",
-    "isExtended": true,
-    "milestone": "102"
-  },
-  {
-    "date": "28-Apr-2022",
-    "milestone": "101"
-  },
-  {
-    "date": "01-Apr-2022",
-    "isExtended": true,
-    "milestone": "100"
-  },
-  {
-    "date": "03-Mar-2022",
-    "milestone": "99"
-  },
-  {
-    "date": "03-Feb-2022",
-    "isExtended": true,
-    "milestone": "98"
-  },
-  {
-    "date": "06-Jan-2022",
-    "milestone": "97"
-  },
-  {
-    "date": "19-Nov-2021",
-    "isExtended": true,
-    "milestone": "96"
-  },
-  {
-    "date": "21-Oct-2021",
-    "milestone": "95"
-  },
-  {
-    "date": "24-Sep-2021",
-    "isExtended": true,
-    "milestone": "94"
-  },
-  {
-    "date": "02-Sep-2021",
-    "milestone": "93"
-  },
-  {
-    "date": "22-July-2021",
-    "milestone": "92"
-  },
-  {
-    "date": "27-May-2021",
-    "milestone": "91"
-  },
-  {
-    "date": "15-Apr-2021",
-    "milestone": "90"
-  },
-  {
-    "date": "08-Mar-2021",
-    "milestone": "89"
-  },
-  {
-    "date": "21-Jan-2021",
-    "milestone": "88"
-  }
-]
+[]
 
 ,
 }
