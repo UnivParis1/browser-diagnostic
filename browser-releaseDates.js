@@ -5,8 +5,8 @@ firefox:
     "cycle": "142",
     "releaseDate": "2025-08-19",
     "eol": false,
-    "latest": "142.0",
-    "latestReleaseDate": "2025-08-19",
+    "latest": "142.0.1",
+    "latestReleaseDate": "2025-08-27",
     "lts": false
   },
   {
@@ -351,6 +351,11 @@ firefox:
 chrome: 
 [
   {
+    "version": "140.0.7339.41",
+    "milestone": 140,
+    "date": "2025-8-27"
+  },
+  {
     "version": "139.0.7258.68",
     "milestone": 139,
     "date": "2025-8-12"
@@ -364,6 +369,11 @@ chrome:
     "version": "139.0.7258.66",
     "milestone": 139,
     "date": "2025-7-30"
+  },
+  {
+    "version": "139.0.7258.156",
+    "milestone": 139,
+    "date": "2025-8-27"
   },
   {
     "version": "139.0.7258.155",
