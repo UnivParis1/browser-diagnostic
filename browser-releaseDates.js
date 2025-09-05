@@ -221,9 +221,9 @@ firefox:
     "cycle": "115",
     "lts": true,
     "releaseDate": "2023-07-04",
-    "eol": "2025-09-16",
-    "latest": "115.23.0",
-    "latestReleaseDate": "2025-04-29"
+    "eol": "2026-03-15",
+    "latest": "115.27.0",
+    "latestReleaseDate": "2025-08-19"
   },
   {
     "cycle": "114",
