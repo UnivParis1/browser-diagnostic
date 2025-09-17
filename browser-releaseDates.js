@@ -1866,7 +1866,244 @@ samsungbrowser:
 
 ,
 edge: 
-[]
+[
+  {
+    "date": "03-Mar-2022",
+    "milestone": "99"
+  },
+  {
+    "date": "03-Feb-2022",
+    "isExtended": true,
+    "milestone": "98"
+  },
+  {
+    "date": "06-Jan-2022",
+    "milestone": "97"
+  },
+  {
+    "date": "19-Nov-2021",
+    "isExtended": true,
+    "milestone": "96"
+  },
+  {
+    "date": "21-Oct-2021",
+    "milestone": "95"
+  },
+  {
+    "date": "24-Sep-2021",
+    "isExtended": true,
+    "milestone": "94"
+  },
+  {
+    "date": "02-Sep-2021",
+    "milestone": "93"
+  },
+  {
+    "date": "22-July-2021",
+    "milestone": "92"
+  },
+  {
+    "date": "27-May-2021",
+    "milestone": "91"
+  },
+  {
+    "date": "15-Apr-2021",
+    "milestone": "90"
+  },
+  {
+    "date": "08-Mar-2021",
+    "milestone": "89"
+  },
+  {
+    "date": "21-Jan-2021",
+    "milestone": "88"
+  },
+  {
+    "date": "5-September-2025",
+    "isExtended": true,
+    "milestone": "140"
+  },
+  {
+    "date": "7-August-2025",
+    "milestone": "139"
+  },
+  {
+    "date": "26-June-2025",
+    "isExtended": true,
+    "milestone": "138"
+  },
+  {
+    "date": "29-May-2025",
+    "milestone": "137"
+  },
+  {
+    "date": "01-May-2025",
+    "isExtended": true,
+    "milestone": "136"
+  },
+  {
+    "date": "3-April-2025",
+    "milestone": "135"
+  },
+  {
+    "date": "6-March-2025",
+    "isExtended": true,
+    "milestone": "134"
+  },
+  {
+    "date": "06-Feb-2025",
+    "milestone": "133"
+  },
+  {
+    "date": "17-Jan-2025",
+    "isExtended": true,
+    "milestone": "132"
+  },
+  {
+    "date": "14-Nov-2024",
+    "milestone": "131"
+  },
+  {
+    "date": "17-Oct-2024",
+    "isExtended": true,
+    "milestone": "130"
+  },
+  {
+    "date": "19-Sep-2024",
+    "milestone": "129"
+  },
+  {
+    "date": "22-Aug-2024",
+    "isExtended": true,
+    "milestone": "128"
+  },
+  {
+    "date": "25-Jul-2024",
+    "milestone": "127"
+  },
+  {
+    "date": "13-Jun-2024",
+    "isExtended": true,
+    "milestone": "126"
+  },
+  {
+    "date": "17-May-2024",
+    "milestone": "125"
+  },
+  {
+    "date": "18-Apr-2024",
+    "isExtended": true,
+    "milestone": "124"
+  },
+  {
+    "date": "22-Mar-2024",
+    "milestone": "123"
+  },
+  {
+    "date": "23-Feb-2024",
+    "isExtended": true,
+    "milestone": "122"
+  },
+  {
+    "date": "25-Jan-2024",
+    "milestone": "121"
+  },
+  {
+    "date": "07-Dec-2023",
+    "isExtended": true,
+    "milestone": "120"
+  },
+  {
+    "date": "02-Nov-2023",
+    "milestone": "119"
+  },
+  {
+    "date": "13-Oct-2023",
+    "isExtended": true,
+    "milestone": "118"
+  },
+  {
+    "date": "15-Sep-2023",
+    "milestone": "117"
+  },
+  {
+    "date": "21-Aug-2023",
+    "isExtended": true,
+    "milestone": "116"
+  },
+  {
+    "date": "21-Jul-2023",
+    "milestone": "115"
+  },
+  {
+    "date": "02-Jun-2023",
+    "isExtended": true,
+    "milestone": "114"
+  },
+  {
+    "date": "05-May-2023",
+    "milestone": "113"
+  },
+  {
+    "date": "06-Apr-2023",
+    "isExtended": true,
+    "milestone": "112"
+  },
+  {
+    "date": "13-Mar-2023",
+    "milestone": "111"
+  },
+  {
+    "date": "09-Feb-2023",
+    "isExtended": true,
+    "milestone": "110"
+  },
+  {
+    "date": "12-Jan-2023",
+    "milestone": "109"
+  },
+  {
+    "date": "05-Dec-2022",
+    "isExtended": true,
+    "milestone": "108"
+  },
+  {
+    "date": "27-Oct-2022",
+    "milestone": "107"
+  },
+  {
+    "date": "03-Oct-2022",
+    "isExtended": true,
+    "milestone": "106"
+  },
+  {
+    "date": "01-Sep-2022",
+    "milestone": "105"
+  },
+  {
+    "date": "05-Aug-2022",
+    "isExtended": true,
+    "milestone": "104"
+  },
+  {
+    "date": "23-Jun-2022",
+    "milestone": "103"
+  },
+  {
+    "date": "31-May-2022",
+    "isExtended": true,
+    "milestone": "102"
+  },
+  {
+    "date": "28-Apr-2022",
+    "milestone": "101"
+  },
+  {
+    "date": "01-Apr-2022",
+    "isExtended": true,
+    "milestone": "100"
+  }
+]
 
 ,
 }
