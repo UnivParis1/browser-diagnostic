@@ -22,8 +22,8 @@ firefox:
     "lts": true,
     "releaseDate": "2025-06-24",
     "eol": "2026-09-16",
-    "latest": "140.2.0",
-    "latestReleaseDate": "2025-08-19"
+    "latest": "140.3.0",
+    "latestReleaseDate": "2025-09-16"
   },
   {
     "cycle": "139",
@@ -222,8 +222,8 @@ firefox:
     "lts": true,
     "releaseDate": "2023-07-04",
     "eol": "2026-03-15",
-    "latest": "115.27.0",
-    "latestReleaseDate": "2025-08-19"
+    "latest": "115.28.0",
+    "latestReleaseDate": "2025-09-16"
   },
   {
     "cycle": "114",
@@ -1815,7 +1815,8 @@ safari:
   "18.3.1": "11 Mar 2025",
   "18.4": "31 Mar 2025",
   "18.5": "12 May 2025",
-  "18.6": "30 Jul 2025"
+  "18.6": "30 Jul 2025",
+  "26": "15 Sep 2025"
 }
 
 ,
