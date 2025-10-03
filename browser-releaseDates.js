@@ -5,8 +5,8 @@ firefox:
     "cycle": "143",
     "releaseDate": "2025-09-16",
     "eol": false,
-    "latest": "143.0.1",
-    "latestReleaseDate": "2025-09-19",
+    "latest": "143.0.3",
+    "latestReleaseDate": "2025-09-30",
     "lts": false
   },
   {
@@ -359,6 +359,16 @@ firefox:
 chrome: 
 [
   {
+    "version": "141.0.7390.55",
+    "milestone": 141,
+    "date": "2025-9-30"
+  },
+  {
+    "version": "141.0.7390.54",
+    "milestone": 141,
+    "date": "2025-9-30"
+  },
+  {
     "version": "141.0.7390.37",
     "milestone": 141,
     "date": "2025-9-24"
@@ -382,6 +392,11 @@ chrome:
     "version": "140.0.7339.41",
     "milestone": 140,
     "date": "2025-8-27"
+  },
+  {
+    "version": "140.0.7339.210",
+    "milestone": 140,
+    "date": "2025-9-30"
   },
   {
     "version": "140.0.7339.209",
@@ -1965,6 +1980,10 @@ edge:
   {
     "date": "21-Jan-2021",
     "milestone": "88"
+  },
+  {
+    "date": "5-September-2025",
+    "milestone": "141"
   },
   {
     "date": "5-September-2025",
