@@ -2075,6 +2075,11 @@ edge:
     "milestone": "88"
   },
   {
+    "date": "31-October-2025",
+    "isExtended": true,
+    "milestone": "142"
+  },
+  {
     "date": "5-September-2025",
     "milestone": "141"
   },
