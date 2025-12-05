@@ -375,6 +375,11 @@ firefox:
 chrome: 
 [
   {
+    "version": "143.0.7499.41",
+    "milestone": 143,
+    "date": "2025-12-2"
+  },
+  {
     "version": "143.0.7499.40",
     "milestone": 143,
     "date": "2025-11-20"
@@ -2136,6 +2141,10 @@ edge:
   {
     "date": "21-Jan-2021",
     "milestone": "88"
+  },
+  {
+    "date": "4-December-2025",
+    "milestone": "143"
   },
   {
     "date": "31-October-2025",
