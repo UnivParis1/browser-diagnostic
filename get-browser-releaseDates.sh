@@ -5,7 +5,7 @@ curl -s https://endoflife.date/api/firefox.json | jq . > firefox-versions.json
  curl -s https://raw.githubusercontent.com/berstend/chrome-versions/master/data/stable/windows/version/list.json ) | jq -r -s '.[0] + .[1] | unique_by(.version) | reverse' > chrome-versions.json
 
 (perl -lne '$t = /^safari:/ ... /\}/; print if $t > 1' browser-releaseDates.js ;
- curl -sL https://support.apple.com/en-us/HT201222 | perl -MJSON -lne 'while (m!<tr>(.*?)</tr>!g) { $l = $1; if ($l =~ /Safari ([\d.]*)/) { $v = $1; $l =~ m!>(\d\d \w\w\w \d\d\d\d)<! and $h{$v} = $1 } } END { print encode_json(\%h) }') | jq -r -s --sort-keys '.[0] + .[1]' > safari-versions.json
+ curl -sL https://support.apple.com/en-us/HT201222 | perl -MJSON -lne 'while (m!<tr>(.*?)</tr>!g) { $l = $1; if ($l =~ /Safari ([\d.]*)/) { $v = $1; $l =~ m!>(\d\d? \w\w\w \d\d\d\d)<! and $h{$v} = $1 } } END { print encode_json(\%h) }') | jq -r -s --sort-keys '.[0] + .[1]' > safari-versions.json
 
 (perl -lne '$t = /^samsungbrowser:/ ... /\}/; print if $t > 1' browser-releaseDates.js ;
  curl -s https://apkpure.fr/fr/samsung-internet-browser/com.sec.android.app.sbrowser/versions | perl -MJSON -lne 'if (/data-dt-version="([^"]*)"/) { $v = $1 } elsif (m!"update-on">([^<]*)</span>! && $v) { $h{$v} = $1; $v = "" } END { print encode_json(\%h) }') | jq -r -s --sort-keys '.[0] + .[1]' > samsungbrowser-versions.json
