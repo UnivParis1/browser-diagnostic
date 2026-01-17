@@ -5,8 +5,8 @@ firefox:
     "cycle": "147",
     "releaseDate": "2026-01-13",
     "eol": false,
-    "latest": "147.0",
-    "latestReleaseDate": "2026-01-13",
+    "latest": "147.0.1",
+    "latestReleaseDate": "2026-01-16",
     "lts": false
   },
   {
@@ -2234,6 +2234,11 @@ edge:
   {
     "date": "21-Jan-2021",
     "milestone": "88"
+  },
+  {
+    "date": "16-January-2026",
+    "isExtended": true,
+    "milestone": "144"
   },
   {
     "date": "4-December-2025",
