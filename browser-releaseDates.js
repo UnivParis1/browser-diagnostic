@@ -5,8 +5,8 @@ firefox:
     "cycle": "147",
     "releaseDate": "2026-01-13",
     "eol": false,
-    "latest": "147.0.3",
-    "latestReleaseDate": "2026-02-04",
+    "latest": "147.0.4",
+    "latestReleaseDate": "2026-02-16",
     "lts": false
   },
   {
@@ -62,8 +62,8 @@ firefox:
     "lts": true,
     "releaseDate": "2025-06-24",
     "eol": "2026-09-16",
-    "latest": "140.7.0",
-    "latestReleaseDate": "2026-01-13"
+    "latest": "140.7.1",
+    "latestReleaseDate": "2026-02-16"
   },
   {
     "cycle": "139",
@@ -262,8 +262,8 @@ firefox:
     "lts": true,
     "releaseDate": "2023-07-04",
     "eol": "2026-03-15",
-    "latest": "115.32.0",
-    "latestReleaseDate": "2026-01-13"
+    "latest": "115.32.1",
+    "latestReleaseDate": "2026-02-16"
   },
   {
     "cycle": "114",
