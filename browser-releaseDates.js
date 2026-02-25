@@ -2,9 +2,17 @@ browser_releaseDates = {
 firefox: 
 [
   {
+    "cycle": "148",
+    "releaseDate": "2026-02-24",
+    "eol": false,
+    "latest": "148.0",
+    "latestReleaseDate": "2026-02-24",
+    "lts": false
+  },
+  {
     "cycle": "147",
     "releaseDate": "2026-01-13",
-    "eol": false,
+    "eol": "2026-02-24",
     "latest": "147.0.4",
     "latestReleaseDate": "2026-02-16",
     "lts": false
@@ -62,8 +70,8 @@ firefox:
     "lts": true,
     "releaseDate": "2025-06-24",
     "eol": "2026-09-16",
-    "latest": "140.7.1",
-    "latestReleaseDate": "2026-02-16"
+    "latest": "140.8.0",
+    "latestReleaseDate": "2026-02-24"
   },
   {
     "cycle": "139",
@@ -261,9 +269,9 @@ firefox:
     "cycle": "115",
     "lts": true,
     "releaseDate": "2023-07-04",
-    "eol": "2026-03-15",
-    "latest": "115.32.1",
-    "latestReleaseDate": "2026-02-16"
+    "eol": "2026-02-28",
+    "latest": "115.33.0",
+    "latestReleaseDate": "2026-02-24"
   },
   {
     "cycle": "114",
