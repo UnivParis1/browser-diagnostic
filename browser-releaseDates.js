@@ -399,6 +399,21 @@ firefox:
 chrome: 
 [
   {
+    "version": "146.0.7680.80",
+    "milestone": 146,
+    "date": "2026-3-14"
+  },
+  {
+    "version": "146.0.7680.76",
+    "milestone": 146,
+    "date": "2026-3-12"
+  },
+  {
+    "version": "146.0.7680.75",
+    "milestone": 146,
+    "date": "2026-3-12"
+  },
+  {
     "version": "146.0.7680.72",
     "milestone": 146,
     "date": "2026-3-10"
@@ -2418,6 +2433,11 @@ edge:
   {
     "date": "21-Jan-2021",
     "milestone": "88"
+  },
+  {
+    "date": "13-March-2026",
+    "isExtended": true,
+    "milestone": "146"
   },
   {
     "date": "14-February-2026",
