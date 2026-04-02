@@ -407,6 +407,16 @@ firefox:
 chrome: 
 [
   {
+    "version": "147.0.7727.50",
+    "milestone": 147,
+    "date": "2026-4-1"
+  },
+  {
+    "version": "147.0.7727.49",
+    "milestone": 147,
+    "date": "2026-4-1"
+  },
+  {
     "version": "147.0.7727.24",
     "milestone": 147,
     "date": "2026-3-25"
@@ -455,6 +465,26 @@ chrome:
     "version": "146.0.7680.31",
     "milestone": 146,
     "date": "2026-2-25"
+  },
+  {
+    "version": "146.0.7680.179",
+    "milestone": 146,
+    "date": "2026-4-1"
+  },
+  {
+    "version": "146.0.7680.178",
+    "milestone": 146,
+    "date": "2026-3-31"
+  },
+  {
+    "version": "146.0.7680.177",
+    "milestone": 146,
+    "date": "2026-3-31"
+  },
+  {
+    "version": "146.0.7680.167",
+    "milestone": 146,
+    "date": "2026-3-31"
   },
   {
     "version": "146.0.7680.166",
