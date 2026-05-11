@@ -5,8 +5,8 @@ firefox:
     "cycle": "150",
     "releaseDate": "2026-04-21",
     "eol": false,
-    "latest": "150.0.1",
-    "latestReleaseDate": "2026-04-28",
+    "latest": "150.0.2",
+    "latestReleaseDate": "2026-05-07",
     "lts": false
   },
   {
@@ -86,8 +86,8 @@ firefox:
     "lts": true,
     "releaseDate": "2025-06-24",
     "eol": "2026-09-16",
-    "latest": "140.10.1",
-    "latestReleaseDate": "2026-04-28"
+    "latest": "140.10.2",
+    "latestReleaseDate": "2026-05-07"
   },
   {
     "cycle": "139",
@@ -286,8 +286,8 @@ firefox:
     "lts": true,
     "releaseDate": "2023-07-04",
     "eol": "2026-08-28",
-    "latest": "115.35.1",
-    "latestReleaseDate": "2026-04-28"
+    "latest": "115.35.2",
+    "latestReleaseDate": "2026-05-07"
   },
   {
     "cycle": "114",
@@ -2605,6 +2605,11 @@ edge:
   {
     "date": "21-Jan-2021",
     "milestone": "88"
+  },
+  {
+    "date": "7-May-2026",
+    "isExtended": true,
+    "milestone": "148"
   },
   {
     "date": "10-April-2026",
