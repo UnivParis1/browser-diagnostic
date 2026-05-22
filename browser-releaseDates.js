@@ -5,8 +5,8 @@ firefox:
     "cycle": "151",
     "releaseDate": "2026-05-18",
     "eol": false,
-    "latest": "151.0",
-    "latestReleaseDate": "2026-05-19",
+    "latest": "151.0.1",
+    "latestReleaseDate": "2026-05-21",
     "lts": false
   },
   {
