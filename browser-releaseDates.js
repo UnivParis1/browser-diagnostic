@@ -2686,6 +2686,10 @@ edge:
     "milestone": "88"
   },
   {
+    "date": "4-june-2026",
+    "milestone": "149"
+  },
+  {
     "date": "7-May-2026",
     "isExtended": true,
     "milestone": "148"
