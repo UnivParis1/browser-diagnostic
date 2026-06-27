@@ -5,8 +5,8 @@ firefox:
     "cycle": "152",
     "releaseDate": "2026-06-16",
     "eol": false,
-    "latest": "152.0.2",
-    "latestReleaseDate": "2026-06-23",
+    "latest": "152.0.3",
+    "latestReleaseDate": "2026-06-25",
     "lts": false
   },
   {
@@ -431,6 +431,16 @@ firefox:
 chrome: 
 [
   {
+    "version": "150.0.7871.47",
+    "milestone": 150,
+    "date": "2026-6-24"
+  },
+  {
+    "version": "150.0.7871.46",
+    "milestone": 150,
+    "date": "2026-6-24"
+  },
+  {
     "version": "150.0.7871.24",
     "milestone": 150,
     "date": "2026-6-17"
@@ -454,6 +464,26 @@ chrome:
     "version": "149.0.7827.22",
     "milestone": 149,
     "date": "2026-5-20"
+  },
+  {
+    "version": "149.0.7827.201",
+    "milestone": 149,
+    "date": "2026-6-25"
+  },
+  {
+    "version": "149.0.7827.200",
+    "milestone": 149,
+    "date": "2026-6-25"
+  },
+  {
+    "version": "149.0.7827.199",
+    "milestone": 149,
+    "date": "2026-6-25"
+  },
+  {
+    "version": "149.0.7827.198",
+    "milestone": 149,
+    "date": "2026-6-24"
   },
   {
     "version": "149.0.7827.197",
