@@ -5,8 +5,8 @@ firefox:
     "cycle": "152",
     "releaseDate": "2026-06-16",
     "eol": false,
-    "latest": "152.0.3",
-    "latestReleaseDate": "2026-06-25",
+    "latest": "152.0.4",
+    "latestReleaseDate": "2026-06-30",
     "lts": false
   },
   {
@@ -2691,7 +2691,8 @@ safari:
   "26.2": "12 Dec 2025",
   "26.3": "11 Feb 2026",
   "26.4": "24 Mar 2026",
-  "26.5": "13 May 2026"
+  "26.5": "13 May 2026",
+  "26.5.2": "29 Jun 2026"
 }
 
 ,
