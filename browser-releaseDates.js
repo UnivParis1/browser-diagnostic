@@ -2,9 +2,17 @@ browser_releaseDates = {
 firefox: 
 [
   {
+    "cycle": "153",
+    "lts": true,
+    "releaseDate": "2026-07-21",
+    "eol": false,
+    "latest": "153.0.4",
+    "latestReleaseDate": "2026-08-11"
+  },
+  {
     "cycle": "152",
     "releaseDate": "2026-06-16",
-    "eol": false,
+    "eol": "2026-07-21",
     "latest": "152.0.6",
     "latestReleaseDate": "2026-07-14",
     "lts": false
@@ -101,9 +109,9 @@ firefox:
     "cycle": "140",
     "lts": true,
     "releaseDate": "2025-06-24",
-    "eol": "2026-09-16",
-    "latest": "140.12.0",
-    "latestReleaseDate": "2026-06-16"
+    "eol": "2026-09-29",
+    "latest": "140.13.0",
+    "latestReleaseDate": "2026-07-21"
   },
   {
     "cycle": "139",
@@ -302,8 +310,8 @@ firefox:
     "lts": true,
     "releaseDate": "2023-07-04",
     "eol": "2027-03-31",
-    "latest": "115.37.0",
-    "latestReleaseDate": "2026-06-16"
+    "latest": "115.38.0",
+    "latestReleaseDate": "2026-07-21"
   },
   {
     "cycle": "114",
@@ -431,9 +439,74 @@ firefox:
 chrome: 
 [
   {
+    "version": "152.0.7977.42",
+    "milestone": 152,
+    "date": "2026-8-12"
+  },
+  {
+    "version": "151.0.7922.77",
+    "milestone": 151,
+    "date": "2026-8-6"
+  },
+  {
+    "version": "151.0.7922.76",
+    "milestone": 151,
+    "date": "2026-8-4"
+  },
+  {
+    "version": "151.0.7922.75",
+    "milestone": 151,
+    "date": "2026-8-4"
+  },
+  {
+    "version": "151.0.7922.72",
+    "milestone": 151,
+    "date": "2026-7-29"
+  },
+  {
+    "version": "151.0.7922.71",
+    "milestone": 151,
+    "date": "2026-7-29"
+  },
+  {
+    "version": "151.0.7922.47",
+    "milestone": 151,
+    "date": "2026-7-22"
+  },
+  {
     "version": "151.0.7922.34",
     "milestone": 151,
     "date": "2026-7-15"
+  },
+  {
+    "version": "151.0.7922.139",
+    "milestone": 151,
+    "date": "2026-8-12"
+  },
+  {
+    "version": "151.0.7922.138",
+    "milestone": 151,
+    "date": "2026-8-11"
+  },
+  {
+    "version": "151.0.7922.137",
+    "milestone": 151,
+    "date": "2026-8-11"
+  },
+  {
+    "version": "151.0.7922.110",
+    "milestone": 151,
+    "date": "2026-8-11"
+  },
+  {
+    "version": "151.0.7922.109",
+    "milestone": 151,
+    "date": "2026-8-6"
+  },
+  {
+    "version": "151.0.7922.108",
+    "milestone": 151,
+    "date": "2026-8-6"
   },
   {
     "version": "150.0.7871.49",
@@ -454,6 +527,66 @@ chrome:
     "version": "150.0.7871.24",
     "milestone": 150,
     "date": "2026-6-17"
+  },
+  {
+    "version": "150.0.7871.189",
+    "milestone": 150,
+    "date": "2026-8-4"
+  },
+  {
+    "version": "150.0.7871.188",
+    "milestone": 150,
+    "date": "2026-7-29"
+  },
+  {
+    "version": "150.0.7871.187",
+    "milestone": 150,
+    "date": "2026-7-23"
+  },
+  {
+    "version": "150.0.7871.186",
+    "milestone": 150,
+    "date": "2026-7-23"
+  },
+  {
+    "version": "150.0.7871.184",
+    "milestone": 150,
+    "date": "2026-7-23"
+  },
+  {
+    "version": "150.0.7871.183",
+    "milestone": 150,
+    "date": "2026-7-22"
+  },
+  {
+    "version": "150.0.7871.182",
+    "milestone": 150,
+    "date": "2026-7-21"
+  },
+  {
+    "version": "150.0.7871.181",
+    "milestone": 150,
+    "date": "2026-7-21"
+  },
+  {
+    "version": "150.0.7871.130",
+    "milestone": 150,
+    "date": "2026-7-21"
+  },
+  {
+    "version": "150.0.7871.129",
+    "milestone": 150,
+    "date": "2026-7-16"
+  },
+  {
+    "version": "150.0.7871.128",
+    "milestone": 150,
+    "date": "2026-7-16"
+  },
+  {
+    "version": "150.0.7871.127",
+    "milestone": 150,
+    "date": "2026-7-16"
   },
   {
     "version": "150.0.7871.126",
@@ -2747,7 +2880,8 @@ safari:
   "26.3": "11 Feb 2026",
   "26.4": "24 Mar 2026",
   "26.5": "13 May 2026",
-  "26.5.2": "29 Jun 2026"
+  "26.5.2": "29 Jun 2026",
+  "26.6": "27 Jul 2026"
 }
 
 ,
@@ -2848,6 +2982,10 @@ edge:
   {
     "date": "21-Jan-2021",
     "milestone": "88"
+  },
+  {
+    "date": "31-July-2026",
+    "milestone": "151"
   },
   {
     "date": "02-July-2026",
