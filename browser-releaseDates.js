@@ -2,9 +2,17 @@ browser_releaseDates = {
 firefox: 
 [
   {
+    "cycle": "156",
+    "releaseDate": "2026-09-15",
+    "eol": false,
+    "latest": "156.0",
+    "latestReleaseDate": "2026-09-15",
+    "lts": false
+  },
+  {
     "cycle": "155",
     "releaseDate": "2026-09-01",
-    "eol": false,
+    "eol": "2026-09-15",
     "latest": "155.0.1",
     "latestReleaseDate": "2026-09-04",
     "lts": false
@@ -22,8 +30,8 @@ firefox:
     "lts": true,
     "releaseDate": "2026-07-21",
     "eol": false,
-    "latest": "153.2.0",
-    "latestReleaseDate": "2026-09-01"
+    "latest": "153.3.0",
+    "latestReleaseDate": "2026-09-15"
   },
   {
     "cycle": "152",
@@ -126,8 +134,8 @@ firefox:
     "lts": true,
     "releaseDate": "2025-06-24",
     "eol": "2026-09-29",
-    "latest": "140.15.0",
-    "latestReleaseDate": "2026-09-01"
+    "latest": "140.16.0",
+    "latestReleaseDate": "2026-09-15"
   },
   {
     "cycle": "139",
@@ -455,6 +463,31 @@ firefox:
 chrome: 
 [
   {
+    "version": "154.0.8037.17",
+    "milestone": 154,
+    "date": "2026-9-9"
+  },
+  {
+    "version": "153.0.8010.48",
+    "milestone": 153,
+    "date": "2026-9-15"
+  },
+  {
+    "version": "153.0.8010.47",
+    "milestone": 153,
+    "date": "2026-9-15"
+  },
+  {
+    "version": "153.0.8010.37",
+    "milestone": 153,
+    "date": "2026-9-8"
+  },
+  {
+    "version": "153.0.8010.36",
+    "milestone": 153,
+    "date": "2026-9-8"
+  },
+  {
     "version": "153.0.8010.27",
     "milestone": 153,
     "date": "2026-9-3"
@@ -463,6 +496,16 @@ chrome:
     "version": "153.0.8010.12",
     "milestone": 153,
     "date": "2026-8-26"
+  },
+  {
+    "version": "152.0.7977.85",
+    "milestone": 152,
+    "date": "2026-9-9"
+  },
+  {
+    "version": "152.0.7977.84",
+    "milestone": 152,
+    "date": "2026-9-8"
   },
   {
     "version": "152.0.7977.83",
@@ -3003,7 +3046,8 @@ safari:
   "26.5": "13 May 2026",
   "26.5.2": "29 Jun 2026",
   "26.6": "27 Jul 2026",
-  "26.6.1": "18 Aug 2026"
+  "26.6.1": "18 Aug 2026",
+  "27": "14 Sep 2026"
 }
 
 ,
@@ -3104,6 +3148,10 @@ edge:
   {
     "date": "21-Jan-2021",
     "milestone": "88"
+  },
+  {
+    "date": "11-September-2026",
+    "milestone": "153"
   },
   {
     "date": "27-August-2026",
