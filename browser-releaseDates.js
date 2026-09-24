@@ -463,6 +463,11 @@ firefox:
 chrome: 
 [
   {
+    "version": "155.0.8059.12",
+    "milestone": 155,
+    "date": "2026-9-23"
+  },
+  {
     "version": "154.0.8037.58",
     "milestone": 154,
     "date": "2026-9-22"
@@ -481,6 +486,11 @@ chrome:
     "version": "154.0.8037.17",
     "milestone": 154,
     "date": "2026-9-9"
+  },
+  {
+    "version": "153.0.8010.55",
+    "milestone": 153,
+    "date": "2026-9-23"
   },
   {
     "version": "153.0.8010.54",
