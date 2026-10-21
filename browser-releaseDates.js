@@ -2,9 +2,17 @@ browser_releaseDates = {
 firefox: 
 [
   {
+    "cycle": "158",
+    "releaseDate": "2026-10-13",
+    "eol": "2026-10-27",
+    "latest": "158.0.1",
+    "latestReleaseDate": "2026-10-20",
+    "lts": false
+  },
+  {
     "cycle": "157",
     "releaseDate": "2026-09-29",
-    "eol": false,
+    "eol": "2026-10-13",
     "latest": "157.0.1",
     "latestReleaseDate": "2026-10-06",
     "lts": false
@@ -38,8 +46,8 @@ firefox:
     "lts": true,
     "releaseDate": "2026-07-21",
     "eol": false,
-    "latest": "153.4.0",
-    "latestReleaseDate": "2026-09-29"
+    "latest": "153.5.1",
+    "latestReleaseDate": "2026-10-20"
   },
   {
     "cycle": "152",
@@ -471,9 +479,69 @@ firefox:
 chrome: 
 [
   {
+    "version": "156.0.8078.48",
+    "milestone": 156,
+    "date": "2026-10-20"
+  },
+  {
+    "version": "156.0.8078.47",
+    "milestone": 156,
+    "date": "2026-10-20"
+  },
+  {
+    "version": "156.0.8078.36",
+    "milestone": 156,
+    "date": "2026-10-14"
+  },
+  {
+    "version": "156.0.8078.35",
+    "milestone": 156,
+    "date": "2026-10-14"
+  },
+  {
     "version": "156.0.8078.12",
     "milestone": 156,
     "date": "2026-10-7"
+  },
+  {
+    "version": "155.0.8059.86",
+    "milestone": 155,
+    "date": "2026-10-20"
+  },
+  {
+    "version": "155.0.8059.85",
+    "milestone": 155,
+    "date": "2026-10-15"
+  },
+  {
+    "version": "155.0.8059.84",
+    "milestone": 155,
+    "date": "2026-10-15"
+  },
+  {
+    "version": "155.0.8059.82",
+    "milestone": 155,
+    "date": "2026-10-15"
+  },
+  {
+    "version": "155.0.8059.81",
+    "milestone": 155,
+    "date": "2026-10-14"
+  },
+  {
+    "version": "155.0.8059.80",
+    "milestone": 155,
+    "date": "2026-10-13"
+  },
+  {
+    "version": "155.0.8059.79",
+    "milestone": 155,
+    "date": "2026-10-13"
+  },
+  {
+    "version": "155.0.8059.41",
+    "milestone": 155,
+    "date": "2026-10-13"
   },
   {
     "version": "155.0.8059.40",
@@ -484,6 +552,11 @@ chrome:
     "version": "155.0.8059.39",
     "milestone": 155,
     "date": "2026-10-6"
+  },
+  {
+    "version": "155.0.8059.27",
+    "milestone": 155,
+    "date": "2026-9-30"
   },
   {
     "version": "155.0.8059.26",
