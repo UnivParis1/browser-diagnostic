@@ -358,8 +358,8 @@ firefox:
     "lts": true,
     "releaseDate": "2023-07-04",
     "eol": "2027-03-31",
-    "latest": "115.38.0",
-    "latestReleaseDate": "2026-07-21"
+    "latest": "115.44.0",
+    "latestReleaseDate": "2026-10-27"
   },
   {
     "cycle": "114",
