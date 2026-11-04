@@ -160,13 +160,13 @@ function compute_browser_warnings(require, ua_info, now) {
     if (ua_info.suggest_macos_upgrade || ua_info.suggest_macos_firefox) {
         os_msgs.push(`
             Si vous avez un MacOS &lt; 13 <small>(Catalina, Big Sur, Monterey)</small>,
-            nous vous invitons à mettre à jour votre système d'exploitation. Mais vous pouvez aussi installer les dernières version de Firefox.
+            nous vous invitons à mettre à jour votre système d'exploitation. Mais vous pouvez aussi installer les dernières versions de Firefox.
         `)
     }
     if (ua_info.suggest_macos_upgrade || ua_info.suggest_macos_firefox_chrome) {
         os_msgs.push(`
             Si vous avez un MacOS 11/12/13 <small>(Big Sur, Monterey, Ventura)</small>,
-            nous vous invitons à mettre à jour votre système d'exploitation. Mais vous pouvez aussi installer les dernières version de Chrome ou Firefox.
+            nous vous invitons à mettre à jour votre système d'exploitation. Mais vous pouvez aussi installer les dernières versions de Chrome ou Firefox.
         `)
     }
     if (ua_info.suggest_windows_upgrade) {
