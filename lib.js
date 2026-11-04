@@ -61,8 +61,12 @@ function get_browser_info(browser_releaseDates, ua) {
             // https://support.google.com/chrome/a/answer/7100626?hl=en
             resp.suggest_windows_upgrade = true
         }
-        if (major <= 117 && ua.match(/Mac OS X/)) {        
-            resp.suggest_macos_upgrade = true
+        if (ua.match(/Mac OS X/)) {
+            if (major <= 117) {
+              resp.suggest_macos_upgrade = true
+            } else if (major <= 150) {
+              resp.suggest_macos_firefox = true
+            }
         }
     } else if (resp.name === 'Edge') {
         let info = browser_releaseDates.edge.find(info => info.milestone === resp.major)
@@ -90,10 +94,10 @@ function get_browser_info(browser_releaseDates, ua) {
             }
         }
         if (!ua.match('Mobile/')) {
-            // Chrome est dispo sur MacOS >= 11 (Big Sur) https://en.wikipedia.org/wiki/Template:Google_Chrome_release_compatibility
+            // Chrome est dispo sur MacOS >= 13 (Venture) https://en.wikipedia.org/wiki/Template:Google_Chrome_release_compatibility
             // Firefox sont dispo sur MacOS >= 10.15 (Catalina) https://www.mozilla.org/en-US/firefox/system-requirements/
 
-            // Un MacOS à jour a :
+            // Un MacOS à jour a Safari :
             // - 18 pour 13(Ventura) / 14(Sonoma)
             // - 17 pour 12(Monterey) / 13(Ventura)
             // - 16 pour 11(Big Sur) / 12(Monterey)
@@ -155,7 +159,7 @@ function compute_browser_warnings(require, ua_info, now) {
 
     if (ua_info.suggest_macos_upgrade || ua_info.suggest_macos_firefox) {
         os_msgs.push(`
-            Si vous avez un MacOS 10.15 <small>(Catalina)</small>,
+            Si vous avez un MacOS &lt; 13 <small>(Catalina, Big Sur, Monterey)</small>,
             nous vous invitons à mettre à jour votre système d'exploitation. Mais vous pouvez aussi installer les dernières version de Firefox.
         `)
     }
