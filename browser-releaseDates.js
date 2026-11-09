@@ -487,6 +487,11 @@ firefox:
 chrome: 
 [
   {
+    "version": "158.0.8127.18",
+    "milestone": 158,
+    "date": "2026-11-4"
+  },
+  {
     "version": "157.0.8103.39",
     "milestone": 157,
     "date": "2026-11-3"
@@ -510,6 +515,11 @@ chrome:
     "version": "157.0.8103.15",
     "milestone": 157,
     "date": "2026-10-22"
+  },
+  {
+    "version": "156.0.8078.82",
+    "milestone": 156,
+    "date": "2026-11-4"
   },
   {
     "version": "156.0.8078.81",
@@ -3418,6 +3428,10 @@ edge:
   {
     "date": "21-Jan-2021",
     "milestone": "88"
+  },
+  {
+    "date": "5-November-2026",
+    "milestone": "157"
   },
   {
     "date": "22-October-2026",
