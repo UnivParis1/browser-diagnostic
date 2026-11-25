@@ -2,6 +2,14 @@ browser_releaseDates = {
 firefox: 
 [
   {
+    "cycle": "161",
+    "releaseDate": "2026-11-24",
+    "eol": "2026-12-08",
+    "latest": "161.0",
+    "latestReleaseDate": "2026-11-24",
+    "lts": false
+  },
+  {
     "cycle": "160",
     "releaseDate": "2026-11-10",
     "eol": "2026-11-24",
@@ -62,8 +70,8 @@ firefox:
     "lts": true,
     "releaseDate": "2026-07-21",
     "eol": false,
-    "latest": "153.7.0",
-    "latestReleaseDate": "2026-11-10"
+    "latest": "153.8.0",
+    "latestReleaseDate": "2026-11-24"
   },
   {
     "cycle": "152",
@@ -366,8 +374,8 @@ firefox:
     "lts": true,
     "releaseDate": "2023-07-04",
     "eol": "2027-03-31",
-    "latest": "115.45.0",
-    "latestReleaseDate": "2026-11-10"
+    "latest": "115.46.0",
+    "latestReleaseDate": "2026-11-24"
   },
   {
     "cycle": "114",
@@ -488,6 +496,78 @@ firefox:
     "eol": "2021-11-02",
     "latest": "78.15.0",
     "latestReleaseDate": "2021-10-05"
+  },
+  {
+    "cycle": "68",
+    "lts": true,
+    "releaseDate": "2019-07-09",
+    "eol": "2020-09-22",
+    "latest": "68.12.0",
+    "latestReleaseDate": "2020-08-25"
+  },
+  {
+    "cycle": "60",
+    "lts": true,
+    "releaseDate": "2018-05-09",
+    "eol": "2019-10-22",
+    "latest": "60.9.0",
+    "latestReleaseDate": "2019-09-03"
+  },
+  {
+    "cycle": "52",
+    "lts": true,
+    "releaseDate": "2017-03-07",
+    "eol": "2018-09-05",
+    "latest": "52.9.0",
+    "latestReleaseDate": "2018-06-26"
+  },
+  {
+    "cycle": "45",
+    "lts": true,
+    "releaseDate": "2016-03-08",
+    "eol": "2017-06-13",
+    "latest": "45.9.0",
+    "latestReleaseDate": "2017-04-19"
+  },
+  {
+    "cycle": "38",
+    "lts": true,
+    "releaseDate": "2015-05-12",
+    "eol": "2016-06-07",
+    "latest": "38.8.0",
+    "latestReleaseDate": "2016-04-26"
+  },
+  {
+    "cycle": "31",
+    "lts": true,
+    "releaseDate": "2014-07-22",
+    "eol": "2015-08-11",
+    "latest": "31.8.0",
+    "latestReleaseDate": "2015-07-02"
+  },
+  {
+    "cycle": "24",
+    "lts": true,
+    "releaseDate": "2013-09-17",
+    "eol": "2014-10-14",
+    "latest": "24.8.1",
+    "latestReleaseDate": "2014-09-24"
+  },
+  {
+    "cycle": "17",
+    "lts": true,
+    "releaseDate": "2012-11-20",
+    "eol": "2013-12-10",
+    "latest": "17.0.11",
+    "latestReleaseDate": "2013-11-15"
+  },
+  {
+    "cycle": "10",
+    "lts": true,
+    "releaseDate": "2012-01-31",
+    "eol": "2013-02-19",
+    "latest": "10.0.12",
+    "latestReleaseDate": "2013-01-08"
   }
 ]
 
@@ -495,9 +575,39 @@ firefox:
 chrome: 
 [
   {
+    "version": "159.0.8154.34",
+    "milestone": 159,
+    "date": "2026-11-24"
+  },
+  {
+    "version": "159.0.8154.33",
+    "milestone": 159,
+    "date": "2026-11-24"
+  },
+  {
     "version": "159.0.8154.13",
     "milestone": 159,
     "date": "2026-11-18"
+  },
+  {
+    "version": "158.0.8127.90",
+    "milestone": 158,
+    "date": "2026-11-24"
+  },
+  {
+    "version": "158.0.8127.89",
+    "milestone": 158,
+    "date": "2026-11-23"
+  },
+  {
+    "version": "158.0.8127.88",
+    "milestone": 158,
+    "date": "2026-11-23"
+  },
+  {
+    "version": "158.0.8127.38",
+    "milestone": 158,
+    "date": "2026-11-23"
   },
   {
     "version": "158.0.8127.37",
